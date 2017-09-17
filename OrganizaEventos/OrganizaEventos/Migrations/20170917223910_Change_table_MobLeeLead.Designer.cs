@@ -8,9 +8,10 @@ using OrganizaEventosApi.Models;
 namespace OrganizaEventosApi.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20170917223910_Change_table_MobLeeLead")]
+    partial class Change_table_MobLeeLead
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")

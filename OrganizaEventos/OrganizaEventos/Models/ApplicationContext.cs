@@ -5,13 +5,17 @@ namespace OrganizaEventosApi.Models {
         public ApplicationContext(DbContextOptions opts) : base(opts) {
         }
 
-        public DbSet<BlogLead> Leads { get; set; }
+        public DbSet<MobLeeLead> Leads { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
         }
 
         protected override void OnModelCreating(ModelBuilder builder) {
             base.OnModelCreating(builder);
+
+            builder.Entity<MobLeeLead>()
+                .HasIndex(l => l.Email)
+                .IsUnique();
         }
     }
 }

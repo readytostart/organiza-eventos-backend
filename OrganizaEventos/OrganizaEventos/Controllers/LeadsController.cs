@@ -11,19 +11,19 @@ using OrganizaEventosApi.Repositories;
 namespace OrganizaEventosApi.Controllers {
     [Route("api/[controller]")]
     public class LeadsController : Controller {
-        private readonly IDataAccess<BlogLead, int> _repositorio;
+        private readonly IDataAccess<MobLeeLead, string> _repositorio;
 
-        public LeadsController(IDataAccess<BlogLead, int> repositorio) {
+        public LeadsController(IDataAccess<MobLeeLead, string> repositorio) {
             _repositorio = repositorio;
         }
 
         [HttpGet]
-        public IEnumerable<BlogLead> Get() {
+        public IEnumerable<MobLeeLead> Get() {
             return _repositorio.GetItens();
         }
 
         [HttpGet("{id}", Name = "GetLead")]
-        public IActionResult Get(int id) {
+        public IActionResult Get(string id) {
             var item = _repositorio.GetItem(id);
             if (item == null) {
                 return NotFound();
@@ -34,7 +34,7 @@ namespace OrganizaEventosApi.Controllers {
         [HttpPost]
         public IActionResult Post(string nome, string email) {
             var ipv4 = GetRequestIp();
-            var lead = new BlogLead {
+            var lead = new MobLeeLead {
                 Nome = nome,
                 Email = email,
                 IpV4 = ipv4,
@@ -44,7 +44,7 @@ namespace OrganizaEventosApi.Controllers {
             return RetorneResultadoDaOperacao(lead, resultado, "Não foi possível realizar o cadastro");
         }
 
-        private static IActionResult RetorneResultadoDaOperacao(BlogLead lead, int resultado, string mensagem) {
+        private static IActionResult RetorneResultadoDaOperacao(MobLeeLead lead, int resultado, string mensagem) {
             if (resultado == 1) {
                 return new ObjectResult(lead);
             }
@@ -55,21 +55,26 @@ namespace OrganizaEventosApi.Controllers {
         }
 
         public string GetRequestIp() {
-            string ip = GetHeaderValueAs<string>("X-Forwarded-For").SplitCsv().FirstOrDefault();
+            try {
+                string ip = HttpContext.Connection.RemoteIpAddress.ToString();
 
-            if (String.IsNullOrEmpty(ip)) {
-                ip = GetHeaderValueAs<string>("REMOTE_ADDR");
+                if (String.IsNullOrEmpty(ip)) {
+                    ip = HttpContext.Features.Get<IHttpConnectionFeature>()?.RemoteIpAddress?.ToString();
+                }
+
+                if (String.IsNullOrEmpty(ip)) {
+                    ip = GetHeaderValueAs<string>("REMOTE_ADDR");
+                }
+
+                if (String.IsNullOrEmpty(ip)) {
+                    ip = GetHeaderValueAs<string>("X-Forwarded-For").SplitCsv().FirstOrDefault();
+                }
+
+                return ip;
             }
-
-            if (String.IsNullOrEmpty(ip)) {
-                ip = HttpContext.Features.Get<IHttpConnectionFeature>()?.RemoteIpAddress?.ToString();
+            catch {
+                return ":::";
             }
-
-            if (String.IsNullOrEmpty(ip)) {
-                ip = HttpContext.Connection.RemoteIpAddress.ToString();
-            }
-
-            return ip;
         }
 
         public T GetHeaderValueAs<T>(string header) {

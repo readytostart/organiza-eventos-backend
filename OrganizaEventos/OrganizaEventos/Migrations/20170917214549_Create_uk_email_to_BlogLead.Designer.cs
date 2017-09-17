@@ -8,23 +8,26 @@ using OrganizaEventosApi.Models;
 namespace OrganizaEventosApi.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20170917214549_Create_uk_email_to_BlogLead")]
+    partial class Create_uk_email_to_BlogLead
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("OrganizaEventosApi.Models.MobLeeLead", b =>
+            modelBuilder.Entity("OrganizaEventosApi.Models.BlogLead", b =>
                 {
-                    b.Property<string>("Email")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("Email")
-                        .HasMaxLength(150);
+                    b.Property<int>("Id");
 
                     b.Property<DateTime>("Data")
                         .HasColumnName("Data");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnName("Email")
+                        .HasMaxLength(150);
 
                     b.Property<string>("IpV4")
                         .IsRequired()
@@ -36,12 +39,12 @@ namespace OrganizaEventosApi.Migrations
                         .HasColumnName("Nome")
                         .HasMaxLength(150);
 
-                    b.HasKey("Email");
+                    b.HasKey("Id");
 
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("MobLeeLead");
+                    b.ToTable("BlogLead");
                 });
         }
     }

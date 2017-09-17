@@ -24,7 +24,7 @@ namespace OrganizaEventosApi {
             services.AddMvc();
 
             services.AddDbContext<ApplicationContext>(opts => opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
-            services.AddSingleton(typeof(IDataAccess<BlogLead, int>), typeof(LeadRepository));
+            services.AddSingleton(typeof(IDataAccess<MobLeeLead, string>), typeof(LeadRepository));
             services.AddMvc();
         }
 

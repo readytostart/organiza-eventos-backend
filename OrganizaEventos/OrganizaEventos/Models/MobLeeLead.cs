@@ -3,17 +3,14 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OrganizaEventosApi.Models {
-    [Table("BlogLead")]
-    public class BlogLead {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Id { get; set; }
-
+    [Table("MobLeeLead")]
+    public class MobLeeLead {
         [Required(ErrorMessage = "O nome completo deve ser informado")]
         [StringLength(150, MinimumLength = 2)]
         [Column("Nome")]
         public string Nome { get; set; }
 
+        [Key]
         [Required(ErrorMessage = "o e-mail deve ser informado")]
         [StringLength(150, MinimumLength = 2)]
         [Column("Email")]
