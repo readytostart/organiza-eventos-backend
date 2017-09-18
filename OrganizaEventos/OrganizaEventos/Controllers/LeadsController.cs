@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Http.Features;
+﻿using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Primitives;
 using OrganizaEventosApi.Extensions;
 using OrganizaEventosApi.Models;
 using OrganizaEventosApi.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 
-namespace OrganizaEventosApi.Controllers {
+namespace OrganizaEventosApi.Controllers{
     [Route("api/[controller]")]
     public class LeadsController : Controller {
         private readonly IDataAccess<MobLeeLead, string> _repositorio;
@@ -33,6 +34,16 @@ namespace OrganizaEventosApi.Controllers {
 
         [HttpPost]
         public IActionResult Post(string nome, string email) {
+            if (!ValideNome(nome)) {
+                return new RedirectResult(
+                    @"https://www.organizaevento.blog.br/landing-page/?error=Nome%20est%C3%A1%20incompleto");
+            }
+
+            if (!ValideEmail(email)) {
+                return new RedirectResult(
+                    @"https://www.organizaevento.blog.br/landing-page/?error=Email%20inv%C3%A1lido");
+            }
+
             var ipv4 = GetRequestIp();
             var lead = new MobLeeLead {
                 Nome = nome,
@@ -41,17 +52,7 @@ namespace OrganizaEventosApi.Controllers {
                 Data = DateTime.Now
             };
             var resultado = _repositorio.Add(lead);
-            return RetorneResultadoDaOperacao(lead, resultado, "Não foi possível realizar o cadastro");
-        }
-
-        private static IActionResult RetorneResultadoDaOperacao(MobLeeLead lead, int resultado, string mensagem) {
-            if (resultado == 1) {
-                return new ObjectResult(lead);
-            }
-            return new JsonResult(new {
-                status = false,
-                mensagem
-            });
+            return RetorneResultadoDaOperacao(resultado);
         }
 
         public string GetRequestIp() {
@@ -88,6 +89,38 @@ namespace OrganizaEventosApi.Controllers {
                 }
             }
             return default(T);
+        }
+
+        private static bool ValideNome(string nome) {
+            if (String.IsNullOrEmpty(nome)) {
+                return false;
+            }
+            var partes = nome.Split(' ');
+            if (partes.Length < 2) {
+                return false;
+            }
+            if (partes[0].Length < 2) {
+                return false;
+            }
+            if (partes[1].Length < 2) {
+                return false;
+            }
+            return true;
+        }
+
+        private static bool ValideEmail(string email) {
+            Regex regExpEmail = new Regex("^[A-Za-z0-9](([_.-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([.-]?[a-zA-Z0-9]+)*)([.][A-Za-z]{2,4})$");
+            Match match = regExpEmail.Match(email);
+            return match.Success;
+        }
+
+        private static IActionResult RetorneResultadoDaOperacao(int resultado) {
+            if (resultado == 1) {
+                return new RedirectResult(
+                    @"https://www.organizaevento.blog.br/landing-page-success/");
+            }
+            return new RedirectResult(
+                @"https://www.organizaevento.blog.br/landing-page/?error=Tente%20Realizar%20o%20cadastro%20novamente");
         }
     }
 }
