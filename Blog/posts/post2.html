@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Duru+Sans" rel="stylesheet">
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#button-lateral").click(function(){
+                var nome = $("#nome-lateral").val();
+                var email = $("#email-lateral").val();
+                cadastrar(nome, email);
+            });
+            $("#button-post").click(function(){
+                var nome = $("#nome-post").val();
+                var email = $("#email-post").val();
+                cadastrar(nome, email);
+            });
+            function cadastrar(nome, email){
+                var params = {nome: nome, email: email}
+                $.post("http://localhost:24125/api/leads", params);
+            }
+        });
+    </script>
+</head>
+<body>
+<div class="container-fluid" id="landing-page">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-4">                    
+                <div class="col-sm-4">
+                    <img src="../img/organizaevento.png" width="100%"/>
+                </div> 
+            </div>      
+        </div>
+    </div>
+    <div id="section-principal">
+        <div class="row">
+            <div id="conteudo" class="col-md-9">
+                <div class="row">
+                    <img src="../img/post-1-image.jpg">                    
+                </div>   
+                <div class="row">                    
+                    <p>18 de Setembro de 2017</p>
+                    <h1>Tudo que você precisa saber para deixar seu evento corporativo mais sustentável</h1>                    
+                    <h2>Saiba como boas práticas podem deixar seu evento cada vez mais responsável.</h2>
+                    <hr>
+                </div>  
+                <div class="row">
+                    <p>Não há dúvidas da enorme quantidade de eventos corporativos realizados no Brasil e que juntos movimentam uma boa parcela do PIB (Produto interno bruto). Apesar de os últimos dados não estarem atualizados, a expressividade desse nicho não há como não pensar nos impactos ambientes causados nos eventos realizado.</p>
+                    <p>No nosso país há uma Política Nacional voltada aos Resíduos Sólidos (PNRS) o que isso quer dizer? E porque ela é importante nesse contexto? Ela exige que os geradores de grande quantidade de resíduos como convecções, eventos e feiras realizem a destinação final ambientalmente adequada dos rejeitos.</p>
+                    <p>Com a facilidade de informações disponíveis e as tendências de mercado consciente, e a mudança de comportamento mundial, despertam a busca pelo coletivo e voltam nossos olhos para as consequências climáticas. Pensar em como ajudar os organizadores de eventos promoverem ações que minimizem impactos, e incluir esse item no planejamento, não é mais uma atividade tão difícil?.</p>
+                    <br>
+                    <h2>Primeiro ponto a observar é... rufem os tambores:</h2>
+                    <h3>Assuma sua responsabilidade!</h3>
+                    <p>Questionar os nossos próprios hábitos, checar as possibilidades, contribui para que assim conseguirmos enxergar uma nova perspectiva para atribulada função de organizar um evento, é um desafio sem dúvida do profissional, mais que isso a missão de interromper ou amenizar a relação quanto maior o porte, maiores os prejuízos na natureza, vejamos alguns exemplos e em contrapartida de boas práticas. </p>
+                    <br>
+                    <h2>Impressos</h2>
+                    <p>Então comecemos por esse item, dentro de um evento tanto pré, durante e pós eles ainda são as estrelas, papeis, panfletos, portfólios, mapas, convites a lista é bem extensa, mas com a tecnologia de forma bastante significativa, ocorrerá uma mudança e a migração para o digital.  Então como primeiro ponto, busque o mínimo viável de impressos, ou os eliminem de vez. Além de contribuir com o meio, torna o processo mais eficiente fornecendo uma solução mais inteligente e agregadora.</p>
+                    <br>
+                    <h2>Lixo</h2>
+                    <p>São produzidas toneladas de lixos, a boa notícia é que a maioria dos produtos produzidos em eventos são recicláveis, então como segunda opção, porque ao invés de apenas destinar para uma caçamba de lixo, não realizamos uma triagem de material no pós evento, procurando parcerias inteligentes que forneçam logística e realizem estes serviço contribuindo para destino correto do lixo.</p>
+                    <br>
+                    <h2>Energia</h2>
+                    <p>O excesso de consumo de energia também é uma variável pouco percebida em eventos, mas com enorme dano.  Então como terceira opção opte por locais com boa iluminação natural claro, dependendo do horário do evento, locais que optem por lâmpadas led, sensores de presença, e  também que possuam um sistema de refrigeração eficiente do ponto vista energético, não precisa depender apenas da energia elétrica. Existem fontes alternativas e soluções mais adequadas.</p>
+                    <br>
+                    <h2>Brindes</h2>
+                    <p>Brindes fazem parte do ritual dos eventos, caneta, Squeeze, personalizáveis, e agora as famosas gift bags serve para que o organizador coloque catálogos e materiais impressos que ele julga interessante. Há uma grande variedade nesse sentido tanto de originalidade como utilidade, além das embalagens. Como quarto ponto foque em produtos mais inteligentes e digitais que tragam alto valor emocional agregado, observe o excesso de embalagens, soluções como totens para localização além de dar um toque tecnológico também contribuem.</p>
+                    <br>
+                    <h2>Buffet orgânico</h2>
+                    <p>Alimentação não poderia ficar de fora, quase todo evento possui um coffe break, a crescente busca por alimentação regrada e saudável é um crescente na vida das pessoas. Como quinto ponto opte por empresas que façam uso consciente da água, utilização de materiais biodegradáveis, e um cardápio orgânico atrativo e colorido: com legumes e verduras frescas e  pratos quentes,  esse tipo de buffet atende diferentes tipos de perfis de clientes.</p>
+                    <p>Por fim Comece por pequenas medidas, observe a viabilidade técnica e financeira, pesquise por fornecedores que optem por atender esses nichos de mercado. Nos casos onde não houver produto ou serviço substituído para não afetar a performance e o planejamento do seu evento, pense em como o dano pode ser compensado posterior ao evento. </p>
+                    <p>Viu? Sempre dá um “jeitinho de fazermos nossa parte” então porque não potencializar as ações ao nível corporativo. “Menos teoria e mais prática”. Declaro aberta a “caça” as empresas que forneçam soluções para minimizar esses problemas. </p>
+                </div>     
+                <div class="row">
+                    <form method="post">
+                        <h4>FIQUE LIGADO!</h4>
+                        <br>
+                        <h5>Quer aprender tudo sobre eventos? Receba os principais conteúdos, dicas e novidades sobre eventos no seu e-mail.</h5>
+                        <br>
+                        <input type="text" class="form-control" id="nome-post" required pattern="^([a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ ]|\n){2,50} ([a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ ]|\n){2,50}$" placeholder="Nome Completo">
+                        <br>
+                        <input type="email" class="form-control" id="email-post" required pattern="^[A-Za-z0-9](([_.-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([.-]?[a-zA-Z0-9]+)*)([.][A-Za-z]{2,4})$" placeholder="E-mail">
+                        <br>
+                        <button class="btn btn-default" id="button-post"  >QUERO RECEBER CONTEÚDOS</button>
+                    </form>
+                </div>       
+            </div>    
+            <div id="barra-lateral" class="col-md-3">
+                <div class="row">
+                    <form method="post">
+                        <h3>FIQUE LIGADO!</h3>
+                        <br>
+                        <p>Quer aprender tudo sobre eventos? Receba os principais conteúdos, dicas e novidades sobre eventos no seu e-mail.</p>
+                        <br>
+                        <input type="text" class="form-control" id="nome-lateral" required pattern="^([a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ ]|\n){2,50} ([a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ ]|\n){2,50}$" placeholder="Nome Completo">
+                        <br>
+                        <input type="email" class="form-control" id="email-lateral" required pattern="^[A-Za-z0-9](([_.-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([.-]?[a-zA-Z0-9]+)*)([.][A-Za-z]{2,4})$" placeholder="E-mail">
+                        <br>
+                        <button class="btn btn-default" id="button-lateral"  >QUERO RECEBER CONTEÚDOS</button>
+                    </form>
+                </div>    
+                <div class="row">
+                    <h1>Você também vai gostar...</h1>
+                    <a href="../index.html" target="_blank">
+                        <p>Veja todo o nosso conteúdo.</p>
+                    </a>
+                    <hr>
+                    <p>Não é novidade para ninguém, montar uma boa rede de contatos é fundamental para quem tem um negócio, essa boa prática pode gerar ligações significativas, além de abertura para novas oportunidades.
+                        <a href="../posts/post1.html" target="_blank">Continuar lendo...</a> 
+                    </p>
+                    <hr>  
+                    <p>Na maioria dos eventos o público é bombardeado por informações e estímulos por todos os lados, cabe ao organizador de eventos definir a melhor estratégia e de que forma irá impactar. A otimização dos processos auxilia no planejamento estratégico do evento, além do que num mundo cada vez mais online, a força das redes socias vem como elemento agregador para as empresas estreitarem relacionamento com seu público e retirarem valiosos insights.
+                        <a href="../posts/post3.html" target="_blank">Continuar lendo...</a> 
+                    </p>
+                </div>         
+            </div>        
+        </div>
+    </div>  
+    <div class="page-footer">
+        <div class="row">
+            <div class="col-md-4">                    
+                <div class="col-sm-4">
+                    <img src="../img/OrganizaEvento_white.png" width="100%"/>
+                </div> 
+            </div>      
+        </div>
+    </div>  
+</div>
+</body>
+</html>

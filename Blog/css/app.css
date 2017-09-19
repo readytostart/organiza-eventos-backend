@@ -1,0 +1,234 @@
+body {
+    background-color: #DDDEE0;
+    font-family: 'Duru Sans', sans-serif;
+}
+
+select option[disabled] {
+    color: #888;
+}
+
+.container-fluid > * {
+    margin: 0 -15px;
+}
+
+.container-fluid .page-header {
+    text-align: center;
+    color: #fcfcfc;
+}
+
+[id^=section] > .row {
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: transparent;
+}
+
+.page-header {
+    background-color: #FFFFFF;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.page-header img {
+    padding-top: 20px;
+}
+
+.page-header h1 {
+    padding-top: 15px;
+    color: #a1ec59;
+}
+
+.page-header h1, .page-header h2 {
+    margin: 0;
+    font-style: bold;
+}
+
+.page-header h2 {
+    font-size: 24px;
+}
+
+.page-header p {
+    font-size: 16px;
+}
+
+#section-principal {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+
+#section-principal img{
+    background-color: transparent;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    max-width: 95%;
+}
+
+#conteudo {
+    background-color: #FFFFFF;
+    max-width: 100%;
+}
+
+#conteudo .post-meta {
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#conteudo h1{
+    color: #C52173;
+    max-width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#conteudo h2{
+    color: #000000;
+    max-width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#conteudo h3{
+    color: #000000;
+    max-width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+#conteudo p{
+    color: #000000;
+    max-width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+#conteudo hr{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    width:"40"; 
+    size:"1"; 
+}
+
+#conteudo form {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #fcfcfc;
+    padding: 15px;
+    border-radius: 5px 5px 0 5px;    
+    border-color: #34CEF5;
+    border-width: medium;
+    border-style: solid;
+    text-align:center;
+}
+
+#conteudo form button {
+    margin-left: 50px;
+    margin-right: 50px;
+    background: #C52173;
+    color: #FFFFFF;
+    text-shadow: none;
+    font-weight: bold;
+    align-self: center;
+    text-align: center;
+}
+
+#conteudo h4 {
+    width: 100%;
+    background: #34CEF5;
+    color: #FFFFFF;
+    text-shadow: none;
+    font-weight: bold;
+    margin: 0px;
+    text-align: center;
+}
+
+#conteudo h5 {
+    width: 100%;
+    font-size: 15px;
+    text-align: justify;
+}
+
+#barra-lateral {
+    background-color: transparent;
+    max-width: 100%;
+}
+
+#barra-lateral .row {
+    margin-left: 10px;
+    background-color: #FFFFFF;
+}
+
+#barra-lateral form {
+    margin: 5px;
+    background-color: #fcfcfc;
+    padding: 15px;
+    border-radius: 5px 5px 0 5px;    
+    border-color: #34CEF5;
+    border-width: medium;
+    border-style: solid;
+}
+
+#barra-lateral form button {
+    width: 100%;
+    background: #C52173;
+    color: #FFFFFF;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+#barra-lateral h1{
+    color: #C52173;
+    max-width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+#barra-lateral h3 {
+    width: 100%;
+    background: #34CEF5;
+    color: #FFFFFF;
+    text-shadow: none;
+    font-weight: bold;
+    margin: 0px;
+}
+
+#barra-lateral p {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    background-color: #fcfcfc;
+}
+
+#barra-lateral hr{
+    margin-left: 40px;
+    margin-right: 40px;
+    width:"40"; 
+    size:"1"; 
+}
+
+.page-footer {
+    background-color: #747171;
+}
+
+.post-meta {
+    text-align: right;
+    font-style: italic;
+}

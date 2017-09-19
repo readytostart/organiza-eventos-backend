@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Duru+Sans" rel="stylesheet">
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#button-lateral").click(function(){
+            var nome = $("#nome-lateral").val();
+            var email = $("#email-lateral").val();
+            cadastrar(nome, email);
+        });
+        $("#button-post").click(function(){
+            var nome = $("#nome-post").val();
+            var email = $("#email-post").val();
+            cadastrar(nome, email);
+        });
+        function cadastrar(nome, email){
+            var params = {nome: nome, email: email}
+            $.post("http://localhost:24125/api/leads", params);
+        }
+    });
+    </script>
+</head>
+<body>
+<div class="container-fluid" id="landing-page">
+    <div class="page-header">
+        <div class="row">
+            <div class="col-md-4">                    
+                <div class="col-sm-4">
+                    <img src="../img/organizaevento.png" width="100%"/>
+                </div> 
+            </div>      
+        </div>
+    </div>
+    <div id="section-principal">
+        <div class="row">
+            <div id="conteudo" class="col-md-9">
+                <div class="row">
+                    <img src="../img/post-1-image.jpg">                    
+                </div>   
+                <div class="row">                    
+                    <p>18 de Setembro de 2017</p>
+                    <h1>5 dicas matadoras de como aumentar seu networking em eventos coorporativos.</h1>                    
+                    <h2>Saiba como ampliar de forma eficaz sua rede de relacionamento em eventos.</h2>
+                    <h3>Palavras chaves: Eventos corporativos, Networking, relacionamento.</h3>
+                    <hr>
+                </div>  
+                <div class="row">
+                    <p>Não é novidade para ninguém, montar uma boa rede de contatos é fundamental para quem tem um negócio, essa boa prática pode gerar ligações significativas, além de abertura para novas oportunidades.</p>
+                    <p>O ideal é frequentar mensalmente eventos corporativos, ou avaliar os que mais agregam ao seu nicho de seu interesse, para formar aquela parceria comercial tão almejada ou até mesmo ampliação do seu raio de vendas.</p>
+                    <p>Networking é um dos principais objetivos das pessoas em eventos, não serve apenas para lançamento de um novo produto, ou por causa de um palestrante famoso, por isso muitos organizadores visam aumentar o engajamento e interação dos participantes visto a atrair esse público.</p>
+                    <p>Imagine na sua vida pessoal e profissional quantos relacionamentos foram formados através de indicações, seja uma cadeia de fornecedores confiáveis, ou até mesmo recolocação no mercado de trabalho.</p>
+                    <br>
+                    <h2>1. Organize seus interesses</h2>
+                    <p>Como item primordial no pré evento, faça uma lista das pessoas que você gostaria de conhecer, pesquise e mapeei interesses em comum, reserve um tempo para conhecer a audiência use as redes sociais a seu favor, mostre um interesse genuíno, dessa forma você irá direcionar seus esforços a seguir seu planejamento, otimizando seu tempo e focando em oportunidades que possam gerar frutos no futuro.</p>
+                    <br>
+                    <h2>Saiba falar de si mesmo</h2>
+                    <p>Saber abordar as pessoas é de extrema importância gerar um impacto positivo, mostrar o seu valor através do discurso, evite exageros, não cometer o equívoco de achar que é uma entrevista de emprego, e tentar vendar “o peixe” a todo custo, o importante é ser lembrado, “Apresente-se”, e se necessário “reapresente-se”.</p>
+                    <br>
+                    <h2>3. Priorize qualidade não é quantidade</h2>
+                    <p>Contatos nunca são de demais, essa realidade nem sempre se aplica aos eventos, gaste tempo com quem interessa, o importante é abrir o leque de possibilidades, conversar com pessoas de sua área ou interesse além de ser uma forma de se manter informado sobre o mercado. Ouvir bastante será importante para aproximar- se das pessoas certas, criar uma identidade, vinculo e até uma possível sintonia.</p>
+                    <br>
+                    <h2>4.Circule pelo evento</h2>
+                    <p>Entre uma “brecha” e um intervalo do evento desenvolva sua estratégia de captação, abra os seus olhos para algumas parcerias não mapeada, ou antes não vistas, pode abrir portas, não subestime nenhuma parceria, aproveite para socializar durante o evento.</p>
+                    <br>
+                    <h2>5. Networking versus NOT Working</h2>
+                    <p>Gere valor para que as pessoas queiram se conectar com você, seja notado de forma sútil, não caia nessa cilada, fuja dos “chavões”, crie conexões de forma gradativa e positivas, após evento Mantenha a Rede de contato deve ser ativa, não procure apenas sua rede de contatos quando precisar uma oportunidade, seja relevante, interessante e atencioso.</p>
+                    <br>
+                    <h2>Conclusão</h2>
+                    <p>Seguindo essas dicas você irá potencializar a maneira como vem construindo seu networking, e poderá obter resultados expressivos nos relacionamentos.</p>
+                </div>     
+                <div class="row">
+                    <form method="post">
+                        <h4>FIQUE LIGADO!</h4>
+                        <br>
+                        <h5>Quer aprender tudo sobre eventos? Receba os principais conteúdos, dicas e novidades sobre eventos no seu e-mail.</h5>
+                        <br>
+                        <input type="text" class="form-control" id="nome-post" required pattern="^([a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ ]|\n){2,50} ([a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ ]|\n){2,50}$" placeholder="Nome Completo">
+                        <br>
+                        <input type="email" class="form-control" id="email-post" required pattern="^[A-Za-z0-9](([_.-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([.-]?[a-zA-Z0-9]+)*)([.][A-Za-z]{2,4})$" placeholder="E-mail">
+                        <br>
+                        <button class="btn btn-default" id="button-post"  >QUERO RECEBER CONTEÚDOS</button>
+                    </form>
+                </div>       
+            </div>    
+            <div id="barra-lateral" class="col-md-3">
+                <div class="row">
+                    <form method="post">
+                        <h3>FIQUE LIGADO!</h3>
+                        <br>
+                        <p>Quer aprender tudo sobre eventos? Receba os principais conteúdos, dicas e novidades sobre eventos no seu e-mail.</p>
+                        <br>
+                        <input type="text" class="form-control" id="nome-lateral" required pattern="^([a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ ]|\n){2,50} ([a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ ]|\n){2,50}$" placeholder="Nome Completo">
+                        <br>
+                        <input type="email" class="form-control" id="email-lateral" required pattern="^[A-Za-z0-9](([_.-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([.-]?[a-zA-Z0-9]+)*)([.][A-Za-z]{2,4})$" placeholder="E-mail">
+                        <br>
+                        <button class="btn btn-default" id="button-lateral"  >QUERO RECEBER CONTEÚDOS</button>
+                    </form>
+                </div>    
+                <div class="row">
+                    <h1>Você também vai gostar...</h1>
+                    <a href="../index.html" target="_blank">
+                        <p>Veja todo o nosso conteúdo.</p>
+                    </a>
+                    <hr>
+                    <p>Não há dúvidas da enorme quantidade de eventos corporativos realizados no Brasil e que juntos movimentam uma boa parcela do PIB (Produto interno bruto).
+                        <a href="../posts/post2.html" target="_blank">Continuar lendo...</a> 
+                    </p>
+                    <hr>  
+                    <p>Na maioria dos eventos o público é bombardeado por informações e estímulos por todos os lados, cabe ao organizador de eventos definir a melhor estratégia e de que forma irá impactar. A otimização dos processos auxilia no planejamento estratégico do evento, além do que num mundo cada vez mais online, a força das redes socias vem como elemento agregador para as empresas estreitarem relacionamento com seu público e retirarem valiosos insights.
+                        <a href="../posts/post3.html" target="_blank">Continuar lendo...</a> 
+                    </p>
+                </div>         
+            </div>        
+        </div>
+    </div> 
+    <div class="page-footer">
+        <div class="row">
+            <div class="col-md-4">                    
+                <div class="col-sm-4">
+                    <img src="img/OrganizaEvento_white.png" width="100%"/>
+                </div> 
+            </div>      
+        </div>
+    </div> 
+</div>
+</body>
+</html>
