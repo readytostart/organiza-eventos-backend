@@ -1,25 +1,35 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Logging;
 using OrganizaEventosApi.Models;
 
 namespace OrganizaEventosApi.Repositories {
     public class LeadRepository : IDataAccess<MobLeeLead, string> {
         private readonly ApplicationContext _context;
+        private readonly ILogger _logger;
 
-        public LeadRepository(ApplicationContext context) {
+        public LeadRepository(ApplicationContext context, ILoggerFactory loggerFactory) {
             _context = context;
+            _logger = loggerFactory.CreateLogger("LoggerCategory");
         }
 
         public int Add(MobLeeLead lead) {
             var resultado = 0;
             if (!VerifiqueSeExiste(lead.Email)) {
                 try {
+                    _logger.LogTrace($"Salvando lead - Nome: {lead.Nome}, Email: {lead.Email}, IpV4: {lead.IpV4}, Data: {lead.Data}");
                     _context.Leads.Add(lead);
                     resultado = _context.SaveChanges();
                 }
-                catch {
+                catch (Exception ex) {
+                    _logger.LogError($"Erro ao salvar lead: {ex.Message}");
+                    _logger.LogCritical($"Nome: {lead.Nome}, Email: {lead.Email}, IpV4: {lead.IpV4}, Data: {lead.Data}");
                     resultado = 0;
                 }
+            }
+            else {
+                _logger.LogWarning($"Lead já cadastrado - Nome: {lead.Nome}, Email: {lead.Email}, IpV4: {lead.IpV4}, Data: {lead.Data}");
             }
             return resultado;
         }

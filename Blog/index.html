@@ -28,8 +28,10 @@
         });
         function cadastrar(nome, email){
             var params = {nome: nome, email: email}
-            $.post("http://localhost:24125/api/leads", params);
-        }
+            var url = "http://localhost:24125/api/leads";
+            $.post(url, params);
+        }        
+
     });
     </script>
 </head>

@@ -18,32 +18,57 @@ namespace OrganizaEventosApi.Controllers{
             _repositorio = repositorio;
         }
 
-        [HttpGet]
-        public IEnumerable<MobLeeLead> Get() {
-            return _repositorio.GetItens();
-        }
-
-        [HttpGet("{id}", Name = "GetLead")]
-        public IActionResult Get(string id) {
-            var item = _repositorio.GetItem(id);
-            if (item == null) {
-                return NotFound();
-            }
-            return new ObjectResult(item);
+        [HttpGet("{email}", Name = "getleads")]
+        public IEnumerable<MobLeeLead> Get(string email) {
+            return email != "organizaeventofloripa@gmail.com" ? new List<MobLeeLead>() : _repositorio.GetItens();
         }
 
         [HttpPost]
-        public IActionResult Post(string nome, string email) {
-            //if (!ValideNome(nome)) {
-            //    return new RedirectResult(
-            //        @"https://www.organizaevento.blog.br/landing-page/?error=Nome%20est%C3%A1%20incompleto");
-            //}
+        public IActionResult Post(string nome, string email, bool ehDownload = false) {
+            try {
+                if (ehDownload) {
+                    return SaveToDownload(nome, email);
+                }
 
-            //if (!ValideEmail(email)) {
-            //    return new RedirectResult(
-            //        @"https://www.organizaevento.blog.br/landing-page/?error=Email%20inv%C3%A1lido");
-            //}
+                if (!ValideNome(nome)) {
+                    return new RedirectResult(
+                        @"https://www.organizaevento.blog.br/landing-page/?error=Nome%20est%C3%A1%20incompleto");
+                }
 
+                if (!ValideEmail(email)) {
+                    return new RedirectResult(
+                        @"https://www.organizaevento.blog.br/landing-page/?error=Email%20inv%C3%A1lido");
+                }
+
+                var resultado = SaveLead(nome, email);
+                return RetorneResultadoDaOperacao(resultado);
+            }
+            catch (Exception ex) {
+                return new RedirectResult(
+                    $@"https://www.organizaevento.blog.br/landing-page/?error={ex.Message}");
+            }
+
+        }
+
+        private IActionResult SaveToDownload(string nome, string email) {
+            try {
+                if (!ValideEmail(email)) {
+                    return new JsonResult(new {Sucesso = false, Mensagem = "E-mail inválido."});
+                }
+
+                if (!ValideNome(nome)) {
+                    return new JsonResult(new {Sucesso = false, Mensagem = "Nome inválido."});
+                }
+
+                SaveLead(nome, email);
+                return new JsonResult(new {Sucesso = true, Mensagem = "Operação realizada."});
+            }
+            catch {
+                return new JsonResult(new {Sucesso = false, Mensagem = "Não foi possível realizar o cadastro."});
+            }
+        }
+
+        private int SaveLead(string nome, string email) {
             var ipv4 = GetRequestIp();
             var lead = new MobLeeLead {
                 Nome = nome,
@@ -52,7 +77,7 @@ namespace OrganizaEventosApi.Controllers{
                 Data = DateTime.Now
             };
             var resultado = _repositorio.Add(lead);
-            return RetorneResultadoDaOperacao(resultado, lead);
+            return resultado;
         }
 
         public string GetRequestIp() {
@@ -114,20 +139,13 @@ namespace OrganizaEventosApi.Controllers{
             return match.Success;
         }
 
-        private static IActionResult RetorneResultadoDaOperacao(int resultado) {
+        private static RedirectResult RetorneResultadoDaOperacao(int resultado) {
             if (resultado == 1) {
                 return new RedirectResult(
                     @"https://www.organizaevento.blog.br/landing-page-success/");
             }
             return new RedirectResult(
                 @"https://www.organizaevento.blog.br/landing-page/?error=Tente%20Realizar%20o%20cadastro%20novamente");
-        }
-
-        private static IActionResult RetorneResultadoDaOperacao(int resultado, MobLeeLead lead) {
-            if (resultado == 1) {
-                return new ObjectResult(lead);
-            }
-            return new JsonResult(new { Sucesso = false, Mensagem = "Não foi possível realizar o cadastro." });
         }
     }
 }
