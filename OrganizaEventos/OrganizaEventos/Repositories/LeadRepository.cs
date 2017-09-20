@@ -15,10 +15,10 @@ namespace OrganizaEventosApi.Repositories {
         }
 
         public int Add(MobLeeLead lead) {
-            var resultado = 0;
+            int resultado;
             if (!VerifiqueSeExiste(lead.Email)) {
                 try {
-                    _logger.LogTrace($"Salvando lead - Nome: {lead.Nome}, Email: {lead.Email}, IpV4: {lead.IpV4}, Data: {lead.Data}");
+                    _logger.LogInformation($"Salvando lead - Nome: {lead.Nome}, Email: {lead.Email}, IpV4: {lead.IpV4}, Data: {lead.Data}");
                     _context.Leads.Add(lead);
                     resultado = _context.SaveChanges();
                 }
@@ -30,6 +30,7 @@ namespace OrganizaEventosApi.Repositories {
             }
             else {
                 _logger.LogWarning($"Lead já cadastrado - Nome: {lead.Nome}, Email: {lead.Email}, IpV4: {lead.IpV4}, Data: {lead.Data}");
+                resultado = 2;
             }
             return resultado;
         }

@@ -31,21 +31,18 @@ namespace OrganizaEventosApi.Controllers{
                 }
 
                 if (!ValideNome(nome)) {
-                    return new RedirectResult(
-                        @"https://www.organizaevento.blog.br/landing-page/?error=Nome%20est%C3%A1%20incompleto");
+                    return RetorneResultadoDaOperacao(3);
                 }
 
                 if (!ValideEmail(email)) {
-                    return new RedirectResult(
-                        @"https://www.organizaevento.blog.br/landing-page/?error=Email%20inv%C3%A1lido");
+                    return RetorneResultadoDaOperacao(4);
                 }
 
                 var resultado = SaveLead(nome, email);
                 return RetorneResultadoDaOperacao(resultado);
             }
-            catch (Exception ex) {
-                return new RedirectResult(
-                    $@"https://www.organizaevento.blog.br/landing-page/?error={ex.Message}");
+            catch {
+                return RetorneResultadoDaOperacao(0); ;
             }
 
         }
@@ -140,12 +137,26 @@ namespace OrganizaEventosApi.Controllers{
         }
 
         private static RedirectResult RetorneResultadoDaOperacao(int resultado) {
-            if (resultado == 1) {
-                return new RedirectResult(
-                    @"https://www.organizaevento.blog.br/landing-page-success/");
+            switch (resultado) {
+                case 0://Erro não tratado
+                    return new RedirectResult(
+                        @"https://www.organizaevento.blog.br/landing-page/?error=Tivemos%20um%20problema.%20Realize%20o%20cadastro%20novamente.");
+                case 1://Sucesso no cadastro do lead
+                    return new RedirectResult(
+                        @"https://www.organizaevento.blog.br/landing-page-success/");
+                case 2://Email duplicado
+                    return new RedirectResult(
+                        @"https://www.organizaevento.blog.br/landing-page/?error=Email%20j%C3%A1%20cadastrado.");
+                case 3://Nome incompleto
+                    return new RedirectResult(
+                        @"https://www.organizaevento.blog.br/landing-page/?error=Nome%20est%C3%A1%20incompleto.%20Informe%20nome%20e%20sobrenome.");
+                case 4://E-mail inválido
+                    return new RedirectResult(
+                        @"https://www.organizaevento.blog.br/landing-page/?error=E-mail%20inv%C3%A1lido%20Informe%20um%20e-mail%20no%20formato:%20xxx@xxx.xxx.");
+                default:
+                    return new RedirectResult(
+                        @"https://www.organizaevento.blog.br/landing-page/?error=Ops.%20Tivemos%20um%20problema.%20Realize%20o%20cadastro%20novamente.");
             }
-            return new RedirectResult(
-                @"https://www.organizaevento.blog.br/landing-page/?error=Tente%20Realizar%20o%20cadastro%20novamente");
         }
     }
 }

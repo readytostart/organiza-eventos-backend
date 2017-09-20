@@ -22,7 +22,7 @@ namespace OrganizaEventosApi {
 
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
-                .WriteTo.RollingFile(Path.Combine(env.ContentRootPath, "log-{Date}.txt"))
+                .WriteTo.RollingFile(Path.Combine(env.ContentRootPath, "Logs/log-{Date}.txt"))
                 .CreateLogger();
         }
 
