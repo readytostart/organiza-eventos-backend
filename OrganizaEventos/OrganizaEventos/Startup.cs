@@ -35,7 +35,16 @@ namespace OrganizaEventosApi {
             services.AddSingleton(typeof(IDataAccess<MobLeeLead, string>), typeof(LeadRepository));
             services.AddMvc();
 
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin();
+                        builder.AllowAnyHeader();
+                        builder.AllowAnyMethod();
+                    });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) {
@@ -45,11 +54,7 @@ namespace OrganizaEventosApi {
 
             app.UseMvc();
 
-            app.UseCors(builder =>
-                builder
-                .AllowAnyHeader()
-                .AllowAnyOrigin()
-                .AllowAnyMethod());
+            app.UseCors("AllowAllOrigins");
         }
     }
 }
