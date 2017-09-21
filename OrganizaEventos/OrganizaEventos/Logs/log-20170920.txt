@@ -1,0 +1,1684 @@
+2017-09-20 22:05:49.388 -03:00 [Debug] Hosting starting
+2017-09-20 22:05:49.714 -03:00 [Debug] Hosting started
+2017-09-20 22:05:49.965 -03:00 [Debug] Connection id ""0HL80HJJ2623H"" started.
+2017-09-20 22:05:49.965 -03:00 [Debug] Connection id ""0HL80HJJ2623G"" started.
+2017-09-20 22:05:50.172 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 22:05:50.172 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 22:05:50.463 -03:00 [Debug] Connection id ""0HL80HJJ2623G"" completed keep alive response.
+2017-09-20 22:05:50.483 -03:00 [Information] Request finished in 382.8879ms 200 
+2017-09-20 22:05:50.666 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:05:50.708 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"50a18c67-190c-4ecd-912a-6e8898cdf025"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 22:05:50.794 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 22:05:51.062 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 22:05:51.067 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 22:05:51.098 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 22:05:51.104 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 22:05:51.109 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 22:05:51.160 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 356.6362ms
+2017-09-20 22:05:51.168 -03:00 [Debug] Connection id ""0HL80HJJ2623H"" completed keep alive response.
+2017-09-20 22:05:51.173 -03:00 [Information] Request finished in 1084.4714ms 200 text/plain; charset=utf-8
+2017-09-20 22:05:57.453 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/organizaeventofloripa@gmail.com  
+2017-09-20 22:05:57.456 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/{email}"'.
+2017-09-20 22:05:57.465 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 22:05:57.613 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 22:05:58.167 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 22:05:58.178 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 22:05:58.313 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 22:05:58.402 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:05:59.483 -03:00 [Information] Executed DbCommand (141ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+FROM [MobLeeLead] AS [m]
+2017-09-20 22:05:59.567 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:05:59.578 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 22:05:59.580 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 22:05:59.584 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 22:05:59.589 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 22:05:59.780 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 2310.1397ms
+2017-09-20 22:05:59.782 -03:00 [Debug] Connection id ""0HL80HJJ2623G"" completed keep alive response.
+2017-09-20 22:05:59.787 -03:00 [Information] Request finished in 2333.7794ms 200 application/json; charset=utf-8
+2017-09-20 22:50:27.812 -03:00 [Debug] Hosting starting
+2017-09-20 22:50:28.214 -03:00 [Debug] Hosting started
+2017-09-20 22:50:28.530 -03:00 [Debug] Connection id ""0HL80ICHAQPMF"" started.
+2017-09-20 22:50:28.530 -03:00 [Debug] Connection id ""0HL80ICHAQPMG"" started.
+2017-09-20 22:50:28.762 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 22:50:28.762 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 22:50:29.016 -03:00 [Debug] Connection id ""0HL80ICHAQPMF"" completed keep alive response.
+2017-09-20 22:50:29.047 -03:00 [Information] Request finished in 374.743ms 200 
+2017-09-20 22:50:29.232 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:50:29.279 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"edd0c104-3d9c-43fa-abdf-31971eca4374"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 22:50:29.348 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 22:50:29.650 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 22:50:29.666 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 22:50:29.682 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 22:50:29.697 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 22:50:29.697 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 22:50:29.749 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 392.585ms
+2017-09-20 22:50:29.764 -03:00 [Debug] Connection id ""0HL80ICHAQPMG"" completed keep alive response.
+2017-09-20 22:50:29.764 -03:00 [Information] Request finished in 1110.1171ms 200 text/plain; charset=utf-8
+2017-09-20 22:50:46.103 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads application/x-www-form-urlencoded; charset=UTF-8 39
+2017-09-20 22:50:46.106 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:50:46.118 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:50:46.271 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:50:46.285 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:50:46.287 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:50:46.290 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"System.String"'.
+2017-09-20 22:50:46.309 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:50:46.312 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:50:46.315 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:50:46.318 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"System.String"'.
+2017-09-20 22:50:46.323 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:50:46.325 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:50:46.327 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:50:46.329 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"System.Boolean"'.
+2017-09-20 22:50:46.335 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 22:50:46.345 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 22:50:46.352 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 229.8841ms
+2017-09-20 22:50:46.355 -03:00 [Debug] Connection id ""0HL80ICHAQPMF"" completed keep alive response.
+2017-09-20 22:50:46.359 -03:00 [Information] Request finished in 257.4697ms 415 
+2017-09-20 22:51:07.024 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads application/x-www-form-urlencoded; charset=UTF-8 48
+2017-09-20 22:51:07.027 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:51:07.030 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:51:07.033 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:51:07.036 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:51:07.038 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:51:07.040 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"System.String"'.
+2017-09-20 22:51:07.043 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:51:07.045 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:51:07.048 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:51:07.051 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"System.String"'.
+2017-09-20 22:51:07.053 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:51:07.055 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 22:51:07.057 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:51:07.060 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"System.Boolean"'.
+2017-09-20 22:51:07.063 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 22:51:07.068 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 22:51:07.072 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 37.664ms
+2017-09-20 22:51:07.075 -03:00 [Debug] Connection id ""0HL80ICHAQPMG"" completed keep alive response.
+2017-09-20 22:51:07.079 -03:00 [Information] Request finished in 59.6168ms 415 
+2017-09-20 22:51:25.524 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads?nome=qa%20wq&email=xitaocrazy@gmaail.com  0
+2017-09-20 22:51:25.527 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:51:25.530 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:51:25.533 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type 'null'.
+2017-09-20 22:51:25.536 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type 'null'.
+2017-09-20 22:51:25.538 -03:00 [Debug] No input formatter was found to support the content type 'null' for use with the [FromBody] attribute.
+2017-09-20 22:51:25.540 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type 'null'.
+2017-09-20 22:51:25.542 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type 'null'.
+2017-09-20 22:51:25.544 -03:00 [Debug] No input formatter was found to support the content type 'null' for use with the [FromBody] attribute.
+2017-09-20 22:51:25.546 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type 'null'.
+2017-09-20 22:51:25.548 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type 'null'.
+2017-09-20 22:51:25.551 -03:00 [Debug] No input formatter was found to support the content type 'null' for use with the [FromBody] attribute.
+2017-09-20 22:51:25.553 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 22:51:25.557 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 22:51:25.561 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 27.4775ms
+2017-09-20 22:51:25.563 -03:00 [Debug] Connection id ""0HL80ICHAQPMF"" completed keep alive response.
+2017-09-20 22:51:25.568 -03:00 [Information] Request finished in 43.1493ms 415 
+2017-09-20 22:51:52.138 -03:00 [Debug] Hosting starting
+2017-09-20 22:51:52.443 -03:00 [Debug] Hosting started
+2017-09-20 22:51:52.512 -03:00 [Debug] Connection id ""0HL80IDABUM6J"" started.
+2017-09-20 22:51:52.512 -03:00 [Debug] Connection id ""0HL80IDABUM6I"" started.
+2017-09-20 22:51:52.728 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 22:51:52.728 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 22:51:52.997 -03:00 [Debug] Connection id ""0HL80IDABUM6J"" completed keep alive response.
+2017-09-20 22:51:53.013 -03:00 [Information] Request finished in 375.3088ms 200 
+2017-09-20 22:51:53.229 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:51:53.282 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"8d63ef4d-f3e0-46ac-9c58-76b68251200d"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 22:51:53.383 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 22:51:53.745 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 22:51:53.745 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 22:51:53.783 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 22:51:53.783 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 22:51:53.798 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 22:51:53.845 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 455.7622ms
+2017-09-20 22:51:53.861 -03:00 [Debug] Connection id ""0HL80IDABUM6I"" completed keep alive response.
+2017-09-20 22:51:53.861 -03:00 [Information] Request finished in 1235.4257ms 200 text/plain; charset=utf-8
+2017-09-20 22:52:08.874 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/nome=qa%20wq&email=xitaocrazy@gmaail.com  0
+2017-09-20 22:52:08.877 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/{email}"'.
+2017-09-20 22:52:08.880 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"' with id '"87280ae5-6ac7-4468-97d7-3968f671d39c"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 22:52:08.883 -03:00 [Debug] No actions matched the current request
+2017-09-20 22:52:08.889 -03:00 [Debug] Request did not match any routes.
+2017-09-20 22:52:08.902 -03:00 [Debug] Connection id ""0HL80IDABUM6J"" completed keep alive response.
+2017-09-20 22:52:08.906 -03:00 [Information] Request finished in 32.8035ms 404 
+2017-09-20 22:52:15.963 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads?nome=qa%20wq&email=xitaocrazy@gmaail.com  0
+2017-09-20 22:52:15.967 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:52:15.981 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:52:16.145 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["qa wq", "xitaocrazy@gmaail.com", "False"]) - ModelState is Valid
+2017-09-20 22:52:31.937 -03:00 [Debug] Compiling query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 22:52:31.969 -03:00 [Debug] Optimized query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 22:52:32.708 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ToSequence(
+    element: MobLeeLead FirstOrDefault(
+        source: IEnumerable<MobLeeLead> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+                FROM [MobLeeLead] AS [l]
+                WHERE [l].[Email] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<MobLeeLead>
+        )
+    )
+)
+
+2017-09-20 22:52:32.786 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:52:33.988 -03:00 [Information] Executed DbCommand (145ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 22:52:34.019 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:52:34.041 -03:00 [Information] Salvando lead - Nome: qa wq, Email: xitaocrazy@gmaail.com, IpV4: ::1, Data: 20/09/2017 22:52:31
+2017-09-20 22:52:34.135 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:52:34.146 -03:00 [Debug] Beginning transaction with isolation level 'Unspecified'.
+2017-09-20 22:52:34.319 -03:00 [Information] Executed DbCommand (67ms) [Parameters=[@p0='?' (Size = 150), @p1='?', @p2='?' (Size = 15), @p3='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MobLeeLead] ([Email], [Data], [IpV4], [Nome])
+VALUES (@p0, @p1, @p2, @p3);
+2017-09-20 22:52:34.336 -03:00 [Debug] Committing transaction.
+2017-09-20 22:52:34.388 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:52:37.474 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 22:52:37.474 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page-success/".
+2017-09-20 22:52:37.490 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 21507.0712ms
+2017-09-20 22:52:37.490 -03:00 [Debug] Connection id ""0HL80IDABUM6I"" completed keep alive response.
+2017-09-20 22:52:37.490 -03:00 [Information] Request finished in 21537.2966ms 302 
+2017-09-20 22:52:55.108 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads application/x-www-form-urlencoded; charset=UTF-8 48
+2017-09-20 22:52:55.112 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:52:55.114 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:52:55.192 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["Daniel Martins", "xitaocrazy@gmail.com", "False"]) - ModelState is Valid
+2017-09-20 22:52:58.175 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:52:58.259 -03:00 [Information] Executed DbCommand (62ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 22:52:58.265 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:52:58.276 -03:00 [Information] Salvando lead - Nome: Daniel Martins, Email: xitaocrazy@gmail.com, IpV4: ::1, Data: 20/09/2017 22:52:58
+2017-09-20 22:52:58.283 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:52:58.289 -03:00 [Debug] Beginning transaction with isolation level 'Unspecified'.
+2017-09-20 22:52:58.459 -03:00 [Information] Executed DbCommand (119ms) [Parameters=[@p0='?' (Size = 150), @p1='?', @p2='?' (Size = 15), @p3='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MobLeeLead] ([Email], [Data], [IpV4], [Nome])
+VALUES (@p0, @p1, @p2, @p3);
+2017-09-20 22:52:58.462 -03:00 [Debug] Committing transaction.
+2017-09-20 22:52:58.528 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'tcp:readytostart.database.windows.net,1433'.
+2017-09-20 22:52:58.530 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 22:52:58.535 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page-success/".
+2017-09-20 22:52:58.539 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 3420.2679ms
+2017-09-20 22:52:58.542 -03:00 [Debug] Connection id ""0HL80IDABUM6J"" completed keep alive response.
+2017-09-20 22:52:58.547 -03:00 [Information] Request finished in 3438.8673ms 302 
+2017-09-20 22:53:42.467 -03:00 [Debug] Connection id ""0HL80IDABUM6I"" received FIN.
+2017-09-20 22:53:42.536 -03:00 [Debug] Connection id ""0HL80IDABUM6I"" disconnecting.
+2017-09-20 22:53:42.536 -03:00 [Debug] Connection id ""0HL80IDABUM6I"" sending FIN.
+2017-09-20 22:53:42.567 -03:00 [Debug] Connection id ""0HL80IDABUM6I"" sent FIN with status "0".
+2017-09-20 22:53:42.586 -03:00 [Debug] Connection id ""0HL80IDABUM6I"" stopped.
+2017-09-20 22:55:10.751 -03:00 [Debug] Hosting starting
+2017-09-20 22:55:11.083 -03:00 [Debug] Hosting started
+2017-09-20 22:55:11.199 -03:00 [Debug] Connection id ""0HL80IF5IK94B"" started.
+2017-09-20 22:55:11.199 -03:00 [Debug] Connection id ""0HL80IF5IK94C"" started.
+2017-09-20 22:55:11.415 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 22:55:11.415 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 22:55:11.669 -03:00 [Debug] Connection id ""0HL80IF5IK94C"" completed keep alive response.
+2017-09-20 22:55:11.684 -03:00 [Information] Request finished in 357.5296ms 200 
+2017-09-20 22:55:11.869 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:55:11.901 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"9e732f06-9a70-426e-bf15-c0236dd83135"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 22:55:11.970 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 22:55:12.255 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 22:55:12.255 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 22:55:12.286 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 22:55:12.302 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 22:55:12.302 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 22:55:12.355 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 365.5439ms
+2017-09-20 22:55:12.355 -03:00 [Debug] Connection id ""0HL80IF5IK94B"" completed keep alive response.
+2017-09-20 22:55:12.355 -03:00 [Information] Request finished in 1047.2368ms 200 text/plain; charset=utf-8
+2017-09-20 22:55:17.298 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads text/plain;charset=UTF-8 51
+2017-09-20 22:55:17.301 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:55:17.312 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:55:17.377 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:17.392 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:17.392 -03:00 [Debug] No input formatter was found to support the content type '"text/plain;charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:55:17.408 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:17.408 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:17.408 -03:00 [Debug] No input formatter was found to support the content type '"text/plain;charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:55:17.408 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:17.408 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:17.408 -03:00 [Debug] No input formatter was found to support the content type '"text/plain;charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:55:17.424 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 22:55:17.424 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 22:55:17.424 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 120.8923ms
+2017-09-20 22:55:17.439 -03:00 [Debug] Connection id ""0HL80IF5IK94C"" completed keep alive response.
+2017-09-20 22:55:17.439 -03:00 [Information] Request finished in 149.5194ms 415 
+2017-09-20 22:55:51.592 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads text/plain;charset=UTF-8 32
+2017-09-20 22:55:51.595 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:55:51.597 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:55:51.600 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:51.602 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:51.604 -03:00 [Debug] No input formatter was found to support the content type '"text/plain;charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:55:51.606 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:51.608 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:51.610 -03:00 [Debug] No input formatter was found to support the content type '"text/plain;charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:55:51.611 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:51.613 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 22:55:51.614 -03:00 [Debug] No input formatter was found to support the content type '"text/plain;charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 22:55:51.617 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 22:55:51.620 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 22:55:51.623 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 23.2ms
+2017-09-20 22:55:51.625 -03:00 [Debug] Connection id ""0HL80IF5IK94B"" completed keep alive response.
+2017-09-20 22:55:51.629 -03:00 [Information] Request finished in 44.8108ms 415 
+2017-09-20 22:59:04.502 -03:00 [Debug] Hosting starting
+2017-09-20 22:59:04.803 -03:00 [Debug] Hosting started
+2017-09-20 22:59:04.950 -03:00 [Debug] Connection id ""0HL80IHB7RLO9"" started.
+2017-09-20 22:59:04.950 -03:00 [Debug] Connection id ""0HL80IHB7RLOA"" started.
+2017-09-20 22:59:05.165 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 22:59:05.165 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 22:59:05.389 -03:00 [Debug] Connection id ""0HL80IHB7RLOA"" completed keep alive response.
+2017-09-20 22:59:05.405 -03:00 [Information] Request finished in 335.0135ms 200 
+2017-09-20 22:59:05.599 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:59:05.631 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"07410691-8509-4569-aacf-4ecc3a0393fd"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 22:59:05.634 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"7a3d4abe-3328-4a1b-805f-a37d12748379"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 22:59:05.703 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 22:59:05.953 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 22:59:05.953 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 22:59:05.991 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 22:59:05.991 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 22:59:05.991 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 22:59:06.058 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 344.5185ms
+2017-09-20 22:59:06.066 -03:00 [Debug] Connection id ""0HL80IHB7RLO9"" completed keep alive response.
+2017-09-20 22:59:06.071 -03:00 [Information] Request finished in 1003.9708ms 200 text/plain; charset=utf-8
+2017-09-20 22:59:09.901 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads text/plain;charset=UTF-8 32
+2017-09-20 22:59:09.904 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:59:09.911 -03:00 [Error] Request matched multiple actions resulting in ambiguity. Matching actions: "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:59:09.964 -03:00 [Error] Connection id ""0HL80IHB7RLOA"": An unhandled exception was thrown by the application.
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.Tree.TreeRouter.<RouteAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Routing.RouteCollection.<RouteAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-09-20 22:59:09.970 -03:00 [Debug] Connection id ""0HL80IHB7RLOA"" completed keep alive response.
+2017-09-20 22:59:09.974 -03:00 [Information] Request finished in 74.4027ms 500 
+2017-09-20 22:59:18.917 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads?nome=qa%20wq&email=xitaocrazy@gmaail.com  0
+2017-09-20 22:59:18.919 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:59:18.924 -03:00 [Error] Request matched multiple actions resulting in ambiguity. Matching actions: "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:59:18.930 -03:00 [Error] Connection id ""0HL80IHB7RLO9"": An unhandled exception was thrown by the application.
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.Tree.TreeRouter.<RouteAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Routing.RouteCollection.<RouteAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-09-20 22:59:18.932 -03:00 [Debug] Connection id ""0HL80IHB7RLO9"" completed keep alive response.
+2017-09-20 22:59:18.932 -03:00 [Information] Request finished in 21.2228ms 500 
+2017-09-20 22:59:39.522 -03:00 [Debug] Hosting starting
+2017-09-20 22:59:39.839 -03:00 [Debug] Hosting started
+2017-09-20 22:59:40.019 -03:00 [Debug] Connection id ""0HL80IHLM8TFQ"" started.
+2017-09-20 22:59:40.019 -03:00 [Debug] Connection id ""0HL80IHLM8TFR"" started.
+2017-09-20 22:59:40.238 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 22:59:40.238 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 22:59:40.454 -03:00 [Debug] Connection id ""0HL80IHLM8TFQ"" completed keep alive response.
+2017-09-20 22:59:40.470 -03:00 [Information] Request finished in 336.1277ms 200 
+2017-09-20 22:59:40.635 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:59:40.677 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"1e4d9128-a57b-41df-a4be-575b848e56cf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 22:59:40.739 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 22:59:41.013 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 22:59:41.018 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 22:59:41.049 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 22:59:41.056 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 22:59:41.060 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 22:59:41.111 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 355.8205ms
+2017-09-20 22:59:41.118 -03:00 [Debug] Connection id ""0HL80IHLM8TFR"" completed keep alive response.
+2017-09-20 22:59:41.122 -03:00 [Information] Request finished in 984.145ms 200 text/plain; charset=utf-8
+2017-09-20 22:59:42.766 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads?nome=qa%20wq&email=xitaocrazy@gmaail.com  0
+2017-09-20 22:59:42.769 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 22:59:42.782 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 22:59:42.921 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["qa wq", "xitaocrazy@gmaail.com", "False"]) - ModelState is Valid
+2017-09-20 22:59:46.192 -03:00 [Debug] Compiling query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 22:59:46.231 -03:00 [Debug] Optimized query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 22:59:46.908 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ToSequence(
+    element: MobLeeLead FirstOrDefault(
+        source: IEnumerable<MobLeeLead> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+                FROM [MobLeeLead] AS [l]
+                WHERE [l].[Email] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<MobLeeLead>
+        )
+    )
+)
+
+2017-09-20 22:59:46.980 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#558862F4\tsql\query'.
+2017-09-20 22:59:47.296 -03:00 [Information] Executed DbCommand (115ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 22:59:47.401 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#558862F4\tsql\query'.
+2017-09-20 22:59:47.438 -03:00 [Warning] Lead já cadastrado - Nome: qa wq, Email: xitaocrazy@gmaail.com, IpV4: ::1, Data: 20/09/2017 22:59:45
+2017-09-20 22:59:47.442 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 22:59:47.449 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page/?error=Email%20j%C3%A1%20cadastrado.".
+2017-09-20 22:59:47.455 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 4669.7081ms
+2017-09-20 22:59:47.457 -03:00 [Debug] Connection id ""0HL80IHLM8TFQ"" completed keep alive response.
+2017-09-20 22:59:47.461 -03:00 [Information] Request finished in 4696.0197ms 302 
+2017-09-20 23:00:17.406 -03:00 [Debug] Hosting starting
+2017-09-20 23:00:17.706 -03:00 [Debug] Hosting started
+2017-09-20 23:00:17.940 -03:00 [Debug] Connection id ""0HL80II10304U"" started.
+2017-09-20 23:00:17.940 -03:00 [Debug] Connection id ""0HL80II10304V"" started.
+2017-09-20 23:00:18.134 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:00:18.134 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:00:18.391 -03:00 [Debug] Connection id ""0HL80II10304U"" completed keep alive response.
+2017-09-20 23:00:18.407 -03:00 [Information] Request finished in 358.0436ms 200 
+2017-09-20 23:00:18.585 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:00:18.625 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"c6d6a43b-f71c-4c0e-a58a-582da7244811"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:00:18.717 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 23:00:18.987 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 23:00:18.991 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:00:19.018 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:00:19.026 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 23:00:19.031 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:00:19.081 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 353.6598ms
+2017-09-20 23:00:19.088 -03:00 [Debug] Connection id ""0HL80II10304V"" completed keep alive response.
+2017-09-20 23:00:19.093 -03:00 [Information] Request finished in 1043.9224ms 200 text/plain; charset=utf-8
+2017-09-20 23:00:23.060 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads?nome=qa%20wq&email=xitaocrazy@gmaail.com  0
+2017-09-20 23:00:23.063 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:00:23.072 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:00:23.143 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type 'null'.
+2017-09-20 23:00:23.145 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type 'null'.
+2017-09-20 23:00:23.145 -03:00 [Debug] No input formatter was found to support the content type 'null' for use with the [FromBody] attribute.
+2017-09-20 23:00:23.164 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 23:00:23.180 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 23:00:23.180 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 111.2834ms
+2017-09-20 23:00:23.180 -03:00 [Debug] Connection id ""0HL80II10304U"" completed keep alive response.
+2017-09-20 23:00:23.180 -03:00 [Information] Request finished in 134.3616ms 415 
+2017-09-20 23:00:30.333 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads text/plain;charset=UTF-8 32
+2017-09-20 23:00:30.335 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:00:30.338 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:00:30.348 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 23:00:30.351 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 23:00:30.353 -03:00 [Debug] No input formatter was found to support the content type '"text/plain;charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 23:00:30.356 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 23:00:30.361 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 23:00:30.366 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 22.6618ms
+2017-09-20 23:00:30.371 -03:00 [Debug] Connection id ""0HL80II10304V"" completed keep alive response.
+2017-09-20 23:00:30.375 -03:00 [Information] Request finished in 44.7258ms 415 
+2017-09-20 23:00:31.467 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads text/plain;charset=UTF-8 32
+2017-09-20 23:00:31.470 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:00:31.472 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:00:31.474 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 23:00:31.476 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 23:00:31.478 -03:00 [Debug] No input formatter was found to support the content type '"text/plain;charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 23:00:31.480 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 23:00:31.482 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 23:00:31.482 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 12.8476ms
+2017-09-20 23:00:31.482 -03:00 [Debug] Connection id ""0HL80II10304U"" completed keep alive response.
+2017-09-20 23:00:31.495 -03:00 [Information] Request finished in 28.453ms 415 
+2017-09-20 23:02:07.928 -03:00 [Debug] Connection id ""0HL80II10304V"" received FIN.
+2017-09-20 23:02:07.928 -03:00 [Debug] Connection id ""0HL80II10304U"" received FIN.
+2017-09-20 23:02:07.951 -03:00 [Debug] Connection id ""0HL80II10304V"" disconnecting.
+2017-09-20 23:02:07.951 -03:00 [Debug] Connection id ""0HL80II10304V"" sending FIN.
+2017-09-20 23:02:07.966 -03:00 [Debug] Connection id ""0HL80II10304U"" disconnecting.
+2017-09-20 23:02:07.966 -03:00 [Debug] Connection id ""0HL80II10304U"" sending FIN.
+2017-09-20 23:02:07.997 -03:00 [Debug] Connection id ""0HL80II10304U"" sent FIN with status "0".
+2017-09-20 23:02:07.997 -03:00 [Debug] Connection id ""0HL80II10304V"" sent FIN with status "0".
+2017-09-20 23:02:08.029 -03:00 [Debug] Connection id ""0HL80II10304U"" stopped.
+2017-09-20 23:02:08.029 -03:00 [Debug] Connection id ""0HL80II10304V"" stopped.
+2017-09-20 23:03:01.853 -03:00 [Debug] Connection id ""0HL80II103050"" started.
+2017-09-20 23:03:01.894 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/%7B%22nome%22:%22Andrew%22,%22email%22:%22Lock%22%7D  0
+2017-09-20 23:03:01.897 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/{email}"'.
+2017-09-20 23:03:01.899 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"' with id '"64b67bfd-6e33-4f21-b583-7642475be4a2"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:03:01.902 -03:00 [Debug] No actions matched the current request
+2017-09-20 23:03:01.904 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:03:01.904 -03:00 [Debug] Connection id ""0HL80II103050"" completed keep alive response.
+2017-09-20 23:03:01.920 -03:00 [Information] Request finished in 28.9641ms 404 
+2017-09-20 23:03:41.738 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads application/x-www-form-urlencoded; charset=UTF-8 48
+2017-09-20 23:03:41.741 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:03:41.743 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:03:41.782 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:03:41.784 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:03:41.786 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 23:03:41.789 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"OrganizaEventosApi.Models.MobLeeLead"'.
+2017-09-20 23:03:41.791 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 23:03:41.795 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 23:03:41.799 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 51.2371ms
+2017-09-20 23:03:41.801 -03:00 [Debug] Connection id ""0HL80II103050"" completed keep alive response.
+2017-09-20 23:03:41.805 -03:00 [Information] Request finished in 75.6717ms 415 
+2017-09-20 23:05:42.617 -03:00 [Debug] Connection id ""0HL80II103050"" disconnecting.
+2017-09-20 23:05:42.617 -03:00 [Debug] Connection id ""0HL80II103050"" sending FIN.
+2017-09-20 23:05:42.633 -03:00 [Debug] Connection id ""0HL80II103050"" sent FIN with status "0".
+2017-09-20 23:05:42.633 -03:00 [Debug] Connection id ""0HL80II103050"" stopped.
+2017-09-20 23:07:30.360 -03:00 [Debug] Connection id ""0HL80II103051"" started.
+2017-09-20 23:07:30.408 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/ text/plain;charset=UTF-8 54
+2017-09-20 23:07:30.410 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:07:30.413 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:07:30.415 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 23:07:30.417 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"text/plain;charset=UTF-8"'.
+2017-09-20 23:07:30.419 -03:00 [Debug] No input formatter was found to support the content type '"text/plain;charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 23:07:30.421 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 23:07:30.425 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 23:07:30.429 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 12.504ms
+2017-09-20 23:07:30.431 -03:00 [Debug] Connection id ""0HL80II103051"" completed keep alive response.
+2017-09-20 23:07:30.431 -03:00 [Information] Request finished in 35.0184ms 415 
+2017-09-20 23:07:39.313 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/ application/json 52
+2017-09-20 23:07:39.316 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:07:39.316 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:07:39.316 -03:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/json"'.
+2017-09-20 23:07:39.501 -03:00 [Debug] JSON input formatter threw an exception.
+Newtonsoft.Json.JsonSerializationException: Error converting value "Nome" to type 'OrganizaEventosApi.Models.MobLeeLead'. Path '', line 1, position 6. ---> System.ArgumentException: Could not cast or convert from System.String to OrganizaEventosApi.Models.MobLeeLead.
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+2017-09-20 23:07:39.554 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments ([""]) - ModelState is Invalid
+2017-09-20 23:07:45.378 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:07:45.382 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:07:45.383 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter"' and content type '""' to write the response.
+2017-09-20 23:07:45.383 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:07:45.398 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 6074.0094ms
+2017-09-20 23:07:45.398 -03:00 [Debug] Connection id ""0HL80II103051"" completed keep alive response.
+2017-09-20 23:07:45.398 -03:00 [Information] Request finished in 6092.778ms 204 
+2017-09-20 23:07:55.861 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/ application/json 54
+2017-09-20 23:07:55.864 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:07:55.867 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:07:55.870 -03:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/json"'.
+2017-09-20 23:07:55.931 -03:00 [Debug] JSON input formatter threw an exception.
+Newtonsoft.Json.JsonSerializationException: Error converting value {null} to type 'System.DateTime'. Path 'Data', line 1, position 41. ---> System.InvalidCastException: Null object cannot be converted to a value type.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id)
+2017-09-20 23:07:55.946 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments ([""]) - ModelState is Invalid
+2017-09-20 23:08:03.840 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:08:03.842 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:08:03.844 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter"' and content type '""' to write the response.
+2017-09-20 23:08:03.848 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:08:03.852 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 7981.1989ms
+2017-09-20 23:08:03.855 -03:00 [Debug] Connection id ""0HL80II103051"" completed keep alive response.
+2017-09-20 23:08:03.859 -03:00 [Information] Request finished in 7998.343ms 204 
+2017-09-20 23:08:14.408 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/ application/json 32
+2017-09-20 23:08:14.410 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:08:14.412 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:08:14.414 -03:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/json"'.
+2017-09-20 23:08:14.449 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["OrganizaEventosApi.Models.MobLeeLead"]) - ModelState is Invalid
+2017-09-20 23:08:35.425 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:08:35.425 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:08:35.425 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:08:35.441 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:08:35.488 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 21082.2372ms
+2017-09-20 23:08:35.488 -03:00 [Debug] Connection id ""0HL80II103051"" completed keep alive response.
+2017-09-20 23:08:35.503 -03:00 [Information] Request finished in 21097.6028ms 200 application/json; charset=utf-8
+2017-09-20 23:09:15.738 -03:00 [Debug] Hosting starting
+2017-09-20 23:09:16.039 -03:00 [Debug] Hosting started
+2017-09-20 23:09:16.108 -03:00 [Debug] Connection id ""0HL80IN1CECAR"" started.
+2017-09-20 23:09:16.108 -03:00 [Debug] Connection id ""0HL80IN1CECAQ"" started.
+2017-09-20 23:09:16.324 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:09:16.324 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:09:16.594 -03:00 [Debug] Connection id ""0HL80IN1CECAQ"" completed keep alive response.
+2017-09-20 23:09:16.610 -03:00 [Information] Request finished in 381.4379ms 200 
+2017-09-20 23:09:16.778 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:09:16.810 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"55b51357-ce76-4520-8cc3-c17821de93bf"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:09:16.879 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 23:09:17.142 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 23:09:17.142 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:09:17.178 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:09:17.179 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 23:09:17.179 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:09:17.226 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 342.9781ms
+2017-09-20 23:09:17.226 -03:00 [Debug] Connection id ""0HL80IN1CECAR"" completed keep alive response.
+2017-09-20 23:09:17.242 -03:00 [Information] Request finished in 1016.4588ms 200 text/plain; charset=utf-8
+2017-09-20 23:09:25.312 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads application/x-www-form-urlencoded; charset=UTF-8 48
+2017-09-20 23:09:25.315 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:09:25.324 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:09:25.457 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:09:25.468 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:09:25.471 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 23:09:25.473 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"OrganizaEventosApi.Models.MobLeeLead"'.
+2017-09-20 23:09:25.490 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 23:09:25.498 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 23:09:25.503 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 174.888ms
+2017-09-20 23:09:25.506 -03:00 [Debug] Connection id ""0HL80IN1CECAQ"" completed keep alive response.
+2017-09-20 23:09:25.510 -03:00 [Information] Request finished in 199.5927ms 415 
+2017-09-20 23:10:14.295 -03:00 [Debug] Hosting starting
+2017-09-20 23:10:14.596 -03:00 [Debug] Hosting started
+2017-09-20 23:10:14.815 -03:00 [Debug] Connection id ""0HL80INIS546J"" started.
+2017-09-20 23:10:14.815 -03:00 [Debug] Connection id ""0HL80INIS546K"" started.
+2017-09-20 23:10:15.017 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:10:15.017 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:10:15.266 -03:00 [Debug] Connection id ""0HL80INIS546J"" completed keep alive response.
+2017-09-20 23:10:15.282 -03:00 [Information] Request finished in 346.2354ms 200 
+2017-09-20 23:10:15.514 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:10:15.550 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"fa19415f-0ced-4b9a-8479-33c9c25bd120"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:10:15.550 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"94e6c1b5-690c-4435-803d-7509ec55e9bc"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:10:15.625 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 23:10:15.914 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 23:10:15.919 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:10:15.944 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:10:15.951 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 23:10:15.955 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:10:16.003 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 369.068ms
+2017-09-20 23:10:16.011 -03:00 [Debug] Connection id ""0HL80INIS546K"" completed keep alive response.
+2017-09-20 23:10:16.017 -03:00 [Information] Request finished in 1086.7413ms 200 text/plain; charset=utf-8
+2017-09-20 23:10:18.556 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/ application/json 32
+2017-09-20 23:10:18.559 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:10:18.566 -03:00 [Error] Request matched multiple actions resulting in ambiguity. Matching actions: "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:10:18.597 -03:00 [Error] Connection id ""0HL80INIS546J"": An unhandled exception was thrown by the application.
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.Tree.TreeRouter.<RouteAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Routing.RouteCollection.<RouteAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-09-20 23:10:18.602 -03:00 [Debug] Connection id ""0HL80INIS546J"" completed keep alive response.
+2017-09-20 23:10:18.607 -03:00 [Information] Request finished in 51.4313ms 500 
+2017-09-20 23:10:20.192 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/ application/json 32
+2017-09-20 23:10:20.194 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:10:20.198 -03:00 [Error] Request matched multiple actions resulting in ambiguity. Matching actions: "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:10:20.198 -03:00 [Error] Connection id ""0HL80INIS546K"": An unhandled exception was thrown by the application.
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.Tree.TreeRouter.<RouteAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Routing.RouteCollection.<RouteAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Server.Kestrel.Internal.Http.Frame`1.<RequestProcessingAsync>d__2.MoveNext()
+2017-09-20 23:10:20.198 -03:00 [Debug] Connection id ""0HL80INIS546K"" completed keep alive response.
+2017-09-20 23:10:20.212 -03:00 [Information] Request finished in 21.392ms 500 
+2017-09-20 23:10:49.562 -03:00 [Debug] Hosting starting
+2017-09-20 23:10:49.878 -03:00 [Debug] Hosting started
+2017-09-20 23:10:49.932 -03:00 [Debug] Connection id ""0HL80INTB7J9Q"" started.
+2017-09-20 23:10:49.932 -03:00 [Debug] Connection id ""0HL80INTB7J9P"" started.
+2017-09-20 23:10:50.145 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:10:50.145 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:10:50.379 -03:00 [Debug] Connection id ""0HL80INTB7J9Q"" completed keep alive response.
+2017-09-20 23:10:50.407 -03:00 [Information] Request finished in 334.8768ms 200 
+2017-09-20 23:10:50.601 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:10:50.635 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"ad56d5fd-d572-4cec-8a78-d709a7b15bfe"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:10:50.701 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 23:10:50.998 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 23:10:51.002 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:10:51.018 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:10:51.033 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 23:10:51.033 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:10:51.100 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 378.0254ms
+2017-09-20 23:10:51.105 -03:00 [Debug] Connection id ""0HL80INTB7J9P"" completed keep alive response.
+2017-09-20 23:10:51.110 -03:00 [Information] Request finished in 1052.6888ms 200 text/plain; charset=utf-8
+2017-09-20 23:10:52.074 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/post application/json 32
+2017-09-20 23:10:52.077 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/{email}"'.
+2017-09-20 23:10:52.080 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"' with id '"fea2268b-5d95-4e4c-9990-72a7493d3e26"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:10:52.082 -03:00 [Debug] No actions matched the current request
+2017-09-20 23:10:52.082 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:10:52.106 -03:00 [Debug] Connection id ""0HL80INTB7J9Q"" completed keep alive response.
+2017-09-20 23:10:52.110 -03:00 [Information] Request finished in 36.7037ms 404 
+2017-09-20 23:10:53.746 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/post application/json 32
+2017-09-20 23:10:53.748 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/{email}"'.
+2017-09-20 23:10:53.748 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"' with id '"fea2268b-5d95-4e4c-9990-72a7493d3e26"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:10:53.748 -03:00 [Debug] No actions matched the current request
+2017-09-20 23:10:53.748 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:10:53.748 -03:00 [Debug] Connection id ""0HL80INTB7J9P"" completed keep alive response.
+2017-09-20 23:10:53.764 -03:00 [Information] Request finished in 21.5804ms 404 
+2017-09-20 23:11:15.074 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/dowload?nome=aasdasdad&email=asdasda application/json 0
+2017-09-20 23:11:15.076 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/{email}"'.
+2017-09-20 23:11:15.079 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"' with id '"fea2268b-5d95-4e4c-9990-72a7493d3e26"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:11:15.081 -03:00 [Debug] No actions matched the current request
+2017-09-20 23:11:15.084 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:11:15.086 -03:00 [Debug] Connection id ""0HL80INTB7J9Q"" completed keep alive response.
+2017-09-20 23:11:15.091 -03:00 [Information] Request finished in 17.3234ms 404 
+2017-09-20 23:12:01.722 -03:00 [Debug] Hosting starting
+2017-09-20 23:12:02.051 -03:00 [Debug] Hosting started
+2017-09-20 23:12:02.161 -03:00 [Debug] Connection id ""0HL80IOIS0GBQ"" started.
+2017-09-20 23:12:02.161 -03:00 [Debug] Connection id ""0HL80IOIS0GBP"" started.
+2017-09-20 23:12:02.370 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:12:02.370 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:12:02.598 -03:00 [Debug] Connection id ""0HL80IOIS0GBP"" completed keep alive response.
+2017-09-20 23:12:02.624 -03:00 [Information] Request finished in 329.0043ms 200 
+2017-09-20 23:12:02.808 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:12:02.839 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"eb5d90e0-04ce-4a67-acec-56245ba7c177"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:12:02.924 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 23:12:03.216 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 23:12:03.220 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:12:03.247 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:12:03.254 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 23:12:03.258 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:12:03.318 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 380.8044ms
+2017-09-20 23:12:03.336 -03:00 [Debug] Connection id ""0HL80IOIS0GBQ"" completed keep alive response.
+2017-09-20 23:12:03.340 -03:00 [Information] Request finished in 1065.0644ms 200 text/plain; charset=utf-8
+2017-09-20 23:12:03.902 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/nome=aasdasdad&email=asdasda application/json 0
+2017-09-20 23:12:03.905 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/{email}"'.
+2017-09-20 23:12:03.907 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"' with id '"f856006e-4fde-4933-84f2-2d792df93167"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:12:03.910 -03:00 [Debug] No actions matched the current request
+2017-09-20 23:12:03.916 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:12:03.928 -03:00 [Debug] Connection id ""0HL80IOIS0GBP"" completed keep alive response.
+2017-09-20 23:12:03.934 -03:00 [Information] Request finished in 32.4517ms 404 
+2017-09-20 23:12:15.905 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads?nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:12:15.907 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:12:15.910 -03:00 [Debug] Connection id ""0HL80IOIS0GBQ"" completed keep alive response.
+2017-09-20 23:12:15.915 -03:00 [Information] Request finished in 9.6035ms 404 
+2017-09-20 23:13:08.513 -03:00 [Debug] Hosting starting
+2017-09-20 23:13:08.844 -03:00 [Debug] Hosting started
+2017-09-20 23:13:08.979 -03:00 [Debug] Connection id ""0HL80IP6P3P47"" started.
+2017-09-20 23:13:08.979 -03:00 [Debug] Connection id ""0HL80IP6P3P46"" started.
+2017-09-20 23:13:09.153 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:13:09.153 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:13:09.400 -03:00 [Debug] Connection id ""0HL80IP6P3P46"" completed keep alive response.
+2017-09-20 23:13:09.427 -03:00 [Information] Request finished in 316.0741ms 200 
+2017-09-20 23:13:09.600 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:13:09.635 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"f28c0c88-9e98-4517-8975-e0ddfe552aef"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:13:09.708 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:13:10.030 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments ([""]) - ModelState is Valid
+2017-09-20 23:13:10.045 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:13:10.086 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:13:10.093 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:13:10.097 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:13:10.298 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 584.5412ms
+2017-09-20 23:13:10.298 -03:00 [Debug] Connection id ""0HL80IP6P3P47"" completed keep alive response.
+2017-09-20 23:13:10.314 -03:00 [Information] Request finished in 1223.9731ms 200 application/json; charset=utf-8
+2017-09-20 23:13:15.963 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/organizaeventofloripa@gmail.com  
+2017-09-20 23:13:15.965 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:13:15.965 -03:00 [Debug] Connection id ""0HL80IP6P3P46"" completed keep alive response.
+2017-09-20 23:13:15.965 -03:00 [Information] Request finished in 15.5063ms 404 
+2017-09-20 23:14:11.576 -03:00 [Debug] Hosting starting
+2017-09-20 23:14:11.913 -03:00 [Debug] Hosting started
+2017-09-20 23:14:12.045 -03:00 [Debug] Connection id ""0HL80IPPINPDG"" started.
+2017-09-20 23:14:12.045 -03:00 [Debug] Connection id ""0HL80IPPINPDH"" started.
+2017-09-20 23:14:12.246 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:14:12.246 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:14:12.478 -03:00 [Debug] Connection id ""0HL80IPPINPDG"" completed keep alive response.
+2017-09-20 23:14:12.515 -03:00 [Information] Request finished in 334.8735ms 200 
+2017-09-20 23:14:12.678 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:14:12.678 -03:00 [Debug] Connection id ""0HL80IPPINPDH"" completed keep alive response.
+2017-09-20 23:14:12.678 -03:00 [Information] Request finished in 532.8134ms 404 
+2017-09-20 23:14:19.391 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/organizaeventofloripa@gmail.com  
+2017-09-20 23:14:19.394 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:14:19.396 -03:00 [Debug] Connection id ""0HL80IPPINPDG"" completed keep alive response.
+2017-09-20 23:14:19.402 -03:00 [Information] Request finished in 9.6376ms 404 
+2017-09-20 23:14:24.562 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/get/organizaeventofloripa@gmail.com  
+2017-09-20 23:14:24.579 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/Get/{email}"'.
+2017-09-20 23:14:24.662 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:14:25.046 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 23:14:25.586 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:14:25.602 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:14:25.734 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 23:14:25.818 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#558862F4\tsql\query'.
+2017-09-20 23:14:51.347 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/post/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:14:51.349 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:14:51.360 -03:00 [Debug] Connection id ""0HL80IPPINPDG"" completed keep alive response.
+2017-09-20 23:14:51.364 -03:00 [Information] Request finished in 17.922ms 404 
+2017-09-20 23:15:55.169 -03:00 [Debug] Hosting starting
+2017-09-20 23:15:55.494 -03:00 [Debug] Hosting started
+2017-09-20 23:15:55.638 -03:00 [Debug] Connection id ""0HL80IQOEK1OS"" started.
+2017-09-20 23:15:55.638 -03:00 [Debug] Connection id ""0HL80IQOEK1OR"" started.
+2017-09-20 23:15:55.864 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:15:55.864 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:15:56.118 -03:00 [Debug] Connection id ""0HL80IQOEK1OS"" completed keep alive response.
+2017-09-20 23:15:56.147 -03:00 [Information] Request finished in 359.3758ms 200 
+2017-09-20 23:15:56.328 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:15:56.328 -03:00 [Debug] Connection id ""0HL80IQOEK1OR"" completed keep alive response.
+2017-09-20 23:15:56.328 -03:00 [Information] Request finished in 571.7477ms 404 
+2017-09-20 23:16:07.125 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/get/organizaeventofloripa@gmail.com  
+2017-09-20 23:16:07.146 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/Get/{email}"'.
+2017-09-20 23:16:07.245 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:16:07.662 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 23:16:09.831 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:16:09.846 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:16:10.000 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 23:16:10.098 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:16:10.354 -03:00 [Information] Executed DbCommand (77ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+FROM [MobLeeLead] AS [m]
+2017-09-20 23:16:10.436 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:16:10.448 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:16:10.477 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:16:10.486 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:16:10.491 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:16:10.734 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 3468.1127ms
+2017-09-20 23:16:10.740 -03:00 [Debug] Connection id ""0HL80IQOEK1OS"" completed keep alive response.
+2017-09-20 23:16:10.745 -03:00 [Information] Request finished in 3619.3138ms 200 application/json; charset=utf-8
+2017-09-20 23:16:24.905 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/post/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:16:24.908 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:16:24.915 -03:00 [Debug] Connection id ""0HL80IQOEK1OR"" completed keep alive response.
+2017-09-20 23:16:24.915 -03:00 [Information] Request finished in 16.7101ms 404 
+2017-09-20 23:17:40.812 -03:00 [Debug] Hosting starting
+2017-09-20 23:17:41.101 -03:00 [Debug] Hosting started
+2017-09-20 23:17:41.164 -03:00 [Debug] Connection id ""0HL80IRNT0CCF"" started.
+2017-09-20 23:17:41.164 -03:00 [Debug] Connection id ""0HL80IRNT0CCG"" started.
+2017-09-20 23:17:41.377 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:17:41.377 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:17:41.646 -03:00 [Debug] Connection id ""0HL80IRNT0CCG"" completed keep alive response.
+2017-09-20 23:17:41.668 -03:00 [Information] Request finished in 360.1612ms 200 
+2017-09-20 23:17:41.829 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:17:41.838 -03:00 [Debug] Connection id ""0HL80IRNT0CCF"" completed keep alive response.
+2017-09-20 23:17:41.843 -03:00 [Information] Request finished in 550.0946ms 404 
+2017-09-20 23:17:42.456 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/get/organizaeventofloripa@gmail.com  
+2017-09-20 23:17:42.465 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/Get/{email}"'.
+2017-09-20 23:17:42.559 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:17:42.933 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 23:17:45.341 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:17:45.347 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:17:45.494 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 23:17:45.563 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:17:45.815 -03:00 [Information] Executed DbCommand (63ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+FROM [MobLeeLead] AS [m]
+2017-09-20 23:17:45.908 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:17:45.922 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:17:45.951 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:17:45.957 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:17:45.962 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:17:46.179 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 3606.8725ms
+2017-09-20 23:17:46.194 -03:00 [Debug] Connection id ""0HL80IRNT0CCG"" completed keep alive response.
+2017-09-20 23:17:46.194 -03:00 [Information] Request finished in 3743.3103ms 200 application/json; charset=utf-8
+2017-09-20 23:17:53.781 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/post/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:17:53.781 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:17:53.781 -03:00 [Debug] Connection id ""0HL80IRNT0CCF"" completed keep alive response.
+2017-09-20 23:17:53.797 -03:00 [Information] Request finished in 16.942ms 404 
+2017-09-20 23:18:12.362 -03:00 [Debug] Hosting starting
+2017-09-20 23:18:12.663 -03:00 [Debug] Hosting started
+2017-09-20 23:18:12.767 -03:00 [Debug] Connection id ""0HL80IS1A898D"" started.
+2017-09-20 23:18:12.767 -03:00 [Debug] Connection id ""0HL80IS1A898C"" started.
+2017-09-20 23:18:12.995 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:18:12.995 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:18:13.217 -03:00 [Debug] Connection id ""0HL80IS1A898C"" completed keep alive response.
+2017-09-20 23:18:13.232 -03:00 [Information] Request finished in 325.6826ms 200 
+2017-09-20 23:18:13.396 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:18:13.396 -03:00 [Debug] Connection id ""0HL80IS1A898D"" completed keep alive response.
+2017-09-20 23:18:13.396 -03:00 [Information] Request finished in 498.5125ms 404 
+2017-09-20 23:18:20.479 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/save/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:18:20.481 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:18:20.481 -03:00 [Debug] Connection id ""0HL80IS1A898C"" completed keep alive response.
+2017-09-20 23:18:20.500 -03:00 [Information] Request finished in 19.5244ms 404 
+2017-09-20 23:18:25.364 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/save?nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:18:25.364 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:18:25.364 -03:00 [Debug] Connection id ""0HL80IS1A898D"" completed keep alive response.
+2017-09-20 23:18:25.364 -03:00 [Information] Request finished in 11.8016ms 404 
+2017-09-20 23:18:43.851 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:18:43.853 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:18:43.856 -03:00 [Debug] Connection id ""0HL80IS1A898C"" completed keep alive response.
+2017-09-20 23:18:43.861 -03:00 [Information] Request finished in 11.1303ms 404 
+2017-09-20 23:18:51.449 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/save/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:18:51.451 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:18:51.454 -03:00 [Debug] Connection id ""0HL80IS1A898D"" completed keep alive response.
+2017-09-20 23:18:51.457 -03:00 [Information] Request finished in 9.9853ms 404 
+2017-09-20 23:19:52.183 -03:00 [Debug] Hosting starting
+2017-09-20 23:19:52.499 -03:00 [Debug] Connection id ""0HL80ISV1MUS1"" started.
+2017-09-20 23:19:52.499 -03:00 [Debug] Connection id ""0HL80ISV1MUS2"" started.
+2017-09-20 23:19:52.568 -03:00 [Debug] Hosting started
+2017-09-20 23:19:52.716 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:19:52.716 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:19:52.954 -03:00 [Debug] Connection id ""0HL80ISV1MUS1"" completed keep alive response.
+2017-09-20 23:19:52.970 -03:00 [Information] Request finished in 326.2262ms 200 
+2017-09-20 23:19:53.139 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:19:53.139 -03:00 [Debug] Connection id ""0HL80ISV1MUS2"" completed keep alive response.
+2017-09-20 23:19:53.139 -03:00 [Information] Request finished in 516.8283ms 404 
+2017-09-20 23:20:07.433 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/post/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:20:07.435 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:20:07.447 -03:00 [Debug] Connection id ""0HL80ISV1MUS1"" completed keep alive response.
+2017-09-20 23:20:07.451 -03:00 [Information] Request finished in 19.781ms 404 
+2017-09-20 23:20:08.380 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/post/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:20:08.382 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:20:08.382 -03:00 [Debug] Connection id ""0HL80ISV1MUS2"" completed keep alive response.
+2017-09-20 23:20:08.382 -03:00 [Information] Request finished in 9.8038ms 404 
+2017-09-20 23:20:24.692 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/organizaeventofloripa@gmail.com  
+2017-09-20 23:20:24.694 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:20:24.697 -03:00 [Debug] Connection id ""0HL80ISV1MUS1"" completed keep alive response.
+2017-09-20 23:20:24.698 -03:00 [Information] Request finished in 10.0641ms 404 
+2017-09-20 23:20:29.718 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/get/organizaeventofloripa@gmail.com  
+2017-09-20 23:20:29.738 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/Get/{email}"'.
+2017-09-20 23:20:29.844 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:20:30.269 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 23:20:32.886 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:20:32.902 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:20:33.049 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 23:20:33.146 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:20:33.435 -03:00 [Information] Executed DbCommand (72ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+FROM [MobLeeLead] AS [m]
+2017-09-20 23:20:33.535 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:20:33.551 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:20:33.588 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:20:33.588 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:20:33.604 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:20:33.861 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 3993.379ms
+2017-09-20 23:20:33.869 -03:00 [Debug] Connection id ""0HL80ISV1MUS2"" completed keep alive response.
+2017-09-20 23:20:33.874 -03:00 [Information] Request finished in 4157.0308ms 200 application/json; charset=utf-8
+2017-09-20 23:20:46.725 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/post/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:20:46.728 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:20:46.731 -03:00 [Debug] Connection id ""0HL80ISV1MUS1"" completed keep alive response.
+2017-09-20 23:20:46.736 -03:00 [Information] Request finished in 10.9452ms 404 
+2017-09-20 23:21:04.280 -03:00 [Debug] Hosting starting
+2017-09-20 23:21:04.603 -03:00 [Debug] Connection id ""0HL80ITKHBA56"" started.
+2017-09-20 23:21:04.621 -03:00 [Debug] Connection id ""0HL80ITKHBA57"" started.
+2017-09-20 23:21:04.665 -03:00 [Debug] Hosting started
+2017-09-20 23:21:04.881 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:21:04.881 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:21:05.128 -03:00 [Debug] Connection id ""0HL80ITKHBA56"" completed keep alive response.
+2017-09-20 23:21:05.144 -03:00 [Information] Request finished in 355.5516ms 200 
+2017-09-20 23:21:05.328 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:21:05.350 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"' with id '"35bb277a-4681-4831-a55c-c247e300a1c0"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:21:05.451 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)"
+2017-09-20 23:21:05.782 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" with arguments (null) - ModelState is Valid
+2017-09-20 23:21:05.782 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:21:05.830 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:21:05.835 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter"' and content type '"text/plain; charset=utf-8"' to write the response.
+2017-09-20 23:21:05.835 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:21:05.898 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.GetRequestIp (OrganizaEventosApi)" in 424.2145ms
+2017-09-20 23:21:05.898 -03:00 [Debug] Connection id ""0HL80ITKHBA57"" completed keep alive response.
+2017-09-20 23:21:05.914 -03:00 [Information] Request finished in 1135.3539ms 200 text/plain; charset=utf-8
+2017-09-20 23:21:14.634 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/organizaeventofloripa@gmail.com  
+2017-09-20 23:21:14.638 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/{email}"'.
+2017-09-20 23:21:14.648 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:21:14.805 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 23:21:17.427 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:21:17.427 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:21:17.588 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 23:21:17.663 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:21:17.953 -03:00 [Information] Executed DbCommand (85ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+FROM [MobLeeLead] AS [m]
+2017-09-20 23:21:18.073 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:21:18.090 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:21:18.093 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:21:18.098 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:21:18.103 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:21:18.319 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 3663.4776ms
+2017-09-20 23:21:18.322 -03:00 [Debug] Connection id ""0HL80ITKHBA56"" completed keep alive response.
+2017-09-20 23:21:18.327 -03:00 [Information] Request finished in 3694.4502ms 200 application/json; charset=utf-8
+2017-09-20 23:21:23.357 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads/nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:21:23.362 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:21:23.377 -03:00 [Debug] Connection id ""0HL80ITKHBA57"" completed keep alive response.
+2017-09-20 23:21:23.381 -03:00 [Information] Request finished in 24.4091ms 404 
+2017-09-20 23:21:31.232 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/api/leads?nome=Daniel%20de%20Souza%20Martins&email=teste5@gmail.com application/json 0
+2017-09-20 23:21:31.235 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:21:31.237 -03:00 [Debug] Connection id ""0HL80ITKHBA56"" completed keep alive response.
+2017-09-20 23:21:31.243 -03:00 [Information] Request finished in 10.9365ms 404 
+2017-09-20 23:21:59.040 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/nome=aasdasdad&email=asdasda application/json 0
+2017-09-20 23:21:59.043 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/{email}"'.
+2017-09-20 23:21:59.046 -03:00 [Debug] Action '"OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"' with id '"22624af6-da3c-4c22-89cc-6811dde32233"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-09-20 23:21:59.050 -03:00 [Debug] No actions matched the current request
+2017-09-20 23:21:59.053 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:21:59.057 -03:00 [Debug] Connection id ""0HL80ITKHBA57"" completed keep alive response.
+2017-09-20 23:21:59.070 -03:00 [Information] Request finished in 38.518ms 404 
+2017-09-20 23:22:20.607 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads?nome=qa%20wq&email=xitaocrazy@gmaail.com application/json 0
+2017-09-20 23:22:20.609 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads"'.
+2017-09-20 23:22:20.613 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:22:20.639 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["qa wq", "xitaocrazy@gmaail.com", "False"]) - ModelState is Valid
+2017-09-20 23:22:26.429 -03:00 [Debug] Compiling query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:22:26.449 -03:00 [Debug] Optimized query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:22:26.996 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ToSequence(
+    element: MobLeeLead FirstOrDefault(
+        source: IEnumerable<MobLeeLead> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+                FROM [MobLeeLead] AS [l]
+                WHERE [l].[Email] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<MobLeeLead>
+        )
+    )
+)
+
+2017-09-20 23:22:26.996 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:22:27.087 -03:00 [Information] Executed DbCommand (68ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 23:22:27.087 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:22:27.103 -03:00 [Warning] Lead já cadastrado - Nome: qa wq, Email: xitaocrazy@gmaail.com, IpV4: ::1, Data: 20/09/2017 23:22:26
+2017-09-20 23:22:27.103 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 23:22:27.103 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page/?error=Email%20j%C3%A1%20cadastrado.".
+2017-09-20 23:22:27.123 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 6505.7936ms
+2017-09-20 23:22:27.126 -03:00 [Debug] Connection id ""0HL80ITKHBA56"" completed keep alive response.
+2017-09-20 23:22:27.130 -03:00 [Information] Request finished in 6530.814ms 302 
+2017-09-20 23:23:04.827 -03:00 [Debug] Hosting starting
+2017-09-20 23:23:05.127 -03:00 [Debug] Hosting started
+2017-09-20 23:23:05.274 -03:00 [Debug] Connection id ""0HL80IUOFRIFB"" started.
+2017-09-20 23:23:05.274 -03:00 [Debug] Connection id ""0HL80IUOFRIFC"" started.
+2017-09-20 23:23:05.475 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:23:05.475 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:23:05.697 -03:00 [Debug] Connection id ""0HL80IUOFRIFB"" completed keep alive response.
+2017-09-20 23:23:05.713 -03:00 [Information] Request finished in 329.4206ms 200 
+2017-09-20 23:23:05.860 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:23:05.875 -03:00 [Debug] Connection id ""0HL80IUOFRIFC"" completed keep alive response.
+2017-09-20 23:23:05.875 -03:00 [Information] Request finished in 495.2984ms 404 
+2017-09-20 23:23:13.310 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/post?nome=qa%20wq&email=xitaocrazy@gmaail.com application/json 0
+2017-09-20 23:23:13.314 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/Post"'.
+2017-09-20 23:23:13.407 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:23:13.792 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["qa wq", "xitaocrazy@gmaail.com", "False"]) - ModelState is Valid
+2017-09-20 23:23:19.393 -03:00 [Debug] Compiling query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:23:19.430 -03:00 [Debug] Optimized query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:23:20.088 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ToSequence(
+    element: MobLeeLead FirstOrDefault(
+        source: IEnumerable<MobLeeLead> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+                FROM [MobLeeLead] AS [l]
+                WHERE [l].[Email] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<MobLeeLead>
+        )
+    )
+)
+
+2017-09-20 23:23:20.162 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:23:20.449 -03:00 [Information] Executed DbCommand (104ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 23:23:20.523 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:23:20.563 -03:00 [Warning] Lead já cadastrado - Nome: qa wq, Email: xitaocrazy@gmaail.com, IpV4: ::1, Data: 20/09/2017 23:23:18
+2017-09-20 23:23:20.563 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 23:23:20.585 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page/?error=Email%20j%C3%A1%20cadastrado.".
+2017-09-20 23:23:20.587 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 7173.713ms
+2017-09-20 23:23:20.612 -03:00 [Debug] Connection id ""0HL80IUOFRIFB"" completed keep alive response.
+2017-09-20 23:23:20.616 -03:00 [Information] Request finished in 7306.129ms 302 
+2017-09-20 23:23:26.851 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/get/organizaeventofloripa@gmail.com  
+2017-09-20 23:23:26.854 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/Get/{email}"'.
+2017-09-20 23:23:26.857 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:23:26.878 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 23:23:28.838 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:23:28.838 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:23:28.838 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 23:23:28.838 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:23:28.869 -03:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+FROM [MobLeeLead] AS [m]
+2017-09-20 23:23:28.884 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:23:28.884 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:23:28.900 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:23:28.919 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:23:28.922 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:23:29.123 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 2266.6996ms
+2017-09-20 23:23:29.133 -03:00 [Debug] Connection id ""0HL80IUOFRIFC"" completed keep alive response.
+2017-09-20 23:23:29.138 -03:00 [Information] Request finished in 2287.0098ms 200 application/json; charset=utf-8
+2017-09-20 23:24:01.570 -03:00 [Debug] Hosting starting
+2017-09-20 23:24:01.871 -03:00 [Debug] Hosting started
+2017-09-20 23:24:01.987 -03:00 [Debug] Connection id ""0HL80IV9CRJ2G"" started.
+2017-09-20 23:24:01.987 -03:00 [Debug] Connection id ""0HL80IV9CRJ2F"" started.
+2017-09-20 23:24:02.203 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:24:02.203 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:24:02.459 -03:00 [Debug] Connection id ""0HL80IV9CRJ2G"" completed keep alive response.
+2017-09-20 23:24:02.490 -03:00 [Information] Request finished in 370.3461ms 200 
+2017-09-20 23:24:02.635 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:24:02.656 -03:00 [Debug] Connection id ""0HL80IV9CRJ2F"" completed keep alive response.
+2017-09-20 23:24:02.657 -03:00 [Information] Request finished in 551.8205ms 404 
+2017-09-20 23:25:28.096 -03:00 [Debug] Connection id ""0HL80IV9CRJ2F"" received FIN.
+2017-09-20 23:25:28.118 -03:00 [Debug] Connection id ""0HL80IV9CRJ2G"" received FIN.
+2017-09-20 23:25:28.120 -03:00 [Debug] Connection id ""0HL80IV9CRJ2H"" started.
+2017-09-20 23:25:28.207 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/get/organizaeventofloripa@gmail.com  
+2017-09-20 23:25:28.207 -03:00 [Debug] Connection id ""0HL80IV9CRJ2G"" disconnecting.
+2017-09-20 23:25:28.207 -03:00 [Debug] Connection id ""0HL80IV9CRJ2F"" disconnecting.
+2017-09-20 23:25:28.229 -03:00 [Debug] Connection id ""0HL80IV9CRJ2G"" sending FIN.
+2017-09-20 23:25:28.230 -03:00 [Debug] Connection id ""0HL80IV9CRJ2F"" sending FIN.
+2017-09-20 23:25:28.261 -03:00 [Debug] Connection id ""0HL80IV9CRJ2G"" sent FIN with status "0".
+2017-09-20 23:25:28.262 -03:00 [Debug] Connection id ""0HL80IV9CRJ2F"" sent FIN with status "0".
+2017-09-20 23:25:28.289 -03:00 [Debug] Connection id ""0HL80IV9CRJ2F"" stopped.
+2017-09-20 23:25:28.290 -03:00 [Debug] Connection id ""0HL80IV9CRJ2G"" stopped.
+2017-09-20 23:25:28.294 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/Get/{email}"'.
+2017-09-20 23:25:28.420 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:25:28.834 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 23:25:31.858 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:25:31.874 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:25:32.011 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 23:25:32.112 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:25:32.396 -03:00 [Information] Executed DbCommand (80ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+FROM [MobLeeLead] AS [m]
+2017-09-20 23:25:32.528 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:25:32.548 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:25:32.584 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:25:32.593 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:25:32.597 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:25:32.854 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 4424.4251ms
+2017-09-20 23:25:32.862 -03:00 [Debug] Connection id ""0HL80IV9CRJ2H"" completed keep alive response.
+2017-09-20 23:25:32.867 -03:00 [Information] Request finished in 4690.9622ms 200 application/json; charset=utf-8
+2017-09-20 23:25:35.706 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/post?nome=qa%20wq&email=xitaocrazy@gmaail.com application/json 0
+2017-09-20 23:25:35.709 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/Post"'.
+2017-09-20 23:25:35.715 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:25:35.745 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["qa wq", "xitaocrazy@gmaail.com", "False"]) - ModelState is Valid
+2017-09-20 23:25:37.248 -03:00 [Debug] Compiling query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:25:37.263 -03:00 [Debug] Optimized query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:25:37.864 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ToSequence(
+    element: MobLeeLead FirstOrDefault(
+        source: IEnumerable<MobLeeLead> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+                FROM [MobLeeLead] AS [l]
+                WHERE [l].[Email] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<MobLeeLead>
+        )
+    )
+)
+
+2017-09-20 23:25:37.864 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:25:37.965 -03:00 [Information] Executed DbCommand (78ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 23:25:37.980 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:25:37.980 -03:00 [Warning] Lead já cadastrado - Nome: qa wq, Email: xitaocrazy@gmaail.com, IpV4: ::1, Data: 20/09/2017 23:25:37
+2017-09-20 23:25:37.980 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 23:25:38.003 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page/?error=Email%20j%C3%A1%20cadastrado.".
+2017-09-20 23:25:38.003 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 2290.6099ms
+2017-09-20 23:25:38.003 -03:00 [Debug] Connection id ""0HL80IV9CRJ2H"" completed keep alive response.
+2017-09-20 23:25:38.018 -03:00 [Information] Request finished in 2313.025ms 302 
+2017-09-20 23:26:21.386 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/PostWithBody application/json 32
+2017-09-20 23:26:21.388 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/PostWithBody"'.
+2017-09-20 23:26:21.391 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.PostWithBody (OrganizaEventosApi)"
+2017-09-20 23:26:21.403 -03:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/json"'.
+2017-09-20 23:26:21.475 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.PostWithBody (OrganizaEventosApi)" with arguments (["OrganizaEventosApi.Models.MobLeeLead"]) - ModelState is Invalid
+2017-09-20 23:26:30.653 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.PostWithBody (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:26:30.656 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:26:30.658 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:26:30.662 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:26:30.667 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.PostWithBody (OrganizaEventosApi)" in 9271.682ms
+2017-09-20 23:26:30.700 -03:00 [Debug] Connection id ""0HL80IV9CRJ2H"" completed keep alive response.
+2017-09-20 23:26:30.711 -03:00 [Information] Request finished in 9333.0454ms 200 application/json; charset=utf-8
+2017-09-20 23:27:41.943 -03:00 [Debug] Connection id ""0HL80IV9CRJ2H"" received FIN.
+2017-09-20 23:27:41.976 -03:00 [Debug] Connection id ""0HL80IV9CRJ2H"" disconnecting.
+2017-09-20 23:27:41.976 -03:00 [Debug] Connection id ""0HL80IV9CRJ2H"" sending FIN.
+2017-09-20 23:27:41.992 -03:00 [Debug] Connection id ""0HL80IV9CRJ2H"" sent FIN with status "0".
+2017-09-20 23:27:41.992 -03:00 [Debug] Connection id ""0HL80IV9CRJ2H"" stopped.
+2017-09-20 23:33:45.825 -03:00 [Debug] Hosting starting
+2017-09-20 23:33:46.141 -03:00 [Debug] Hosting started
+2017-09-20 23:33:46.379 -03:00 [Debug] Connection id ""0HL80J4NHRGP4"" started.
+2017-09-20 23:33:46.379 -03:00 [Debug] Connection id ""0HL80J4NHRGP5"" started.
+2017-09-20 23:33:46.580 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:33:46.580 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:33:46.796 -03:00 [Debug] Connection id ""0HL80J4NHRGP5"" completed keep alive response.
+2017-09-20 23:33:46.827 -03:00 [Information] Request finished in 318.3679ms 200 
+2017-09-20 23:33:46.981 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:33:46.981 -03:00 [Debug] Connection id ""0HL80J4NHRGP4"" completed keep alive response.
+2017-09-20 23:33:46.981 -03:00 [Information] Request finished in 496.4224ms 404 
+2017-09-20 23:34:01.116 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/get/organizaeventofloripa@gmail.com  
+2017-09-20 23:34:01.134 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/Get/{email}"'.
+2017-09-20 23:34:01.217 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:34:01.600 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 23:34:04.768 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:34:04.768 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:34:04.907 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 23:34:04.991 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:34:05.207 -03:00 [Information] Executed DbCommand (57ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+FROM [MobLeeLead] AS [m]
+2017-09-20 23:34:05.306 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:34:05.317 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:34:05.331 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:34:05.346 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:34:05.346 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:34:05.562 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 4325.7741ms
+2017-09-20 23:34:05.567 -03:00 [Debug] Connection id ""0HL80J4NHRGP5"" completed keep alive response.
+2017-09-20 23:34:05.571 -03:00 [Information] Request finished in 4456.8038ms 200 application/json; charset=utf-8
+2017-09-20 23:34:27.764 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/post?nome=teste&email=teste@gmaail.com application/json 0
+2017-09-20 23:34:27.764 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/Post"'.
+2017-09-20 23:34:27.764 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:34:27.836 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["teste", "teste@gmaail.com"]) - ModelState is Valid
+2017-09-20 23:34:29.931 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 23:34:29.946 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page/?error=Nome%20est%C3%A1%20incompleto.%20Informe%20nome%20e%20sobrenome.".
+2017-09-20 23:34:29.962 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 2188.8909ms
+2017-09-20 23:34:29.962 -03:00 [Debug] Connection id ""0HL80J4NHRGP4"" completed keep alive response.
+2017-09-20 23:34:29.962 -03:00 [Information] Request finished in 2213.0057ms 302 
+2017-09-20 23:34:41.622 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/post?nome=teste%20teste&email=testegmaail.com application/json 0
+2017-09-20 23:34:41.625 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/Post"'.
+2017-09-20 23:34:41.627 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:34:41.648 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["teste teste", "testegmaail.com"]) - ModelState is Valid
+2017-09-20 23:34:43.477 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 23:34:43.493 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page/?error=E-mail%20inv%C3%A1lido%20Informe%20um%20e-mail%20no%20formato:%20xxx@xxx.xxx.".
+2017-09-20 23:34:43.493 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 1865.9372ms
+2017-09-20 23:34:43.493 -03:00 [Debug] Connection id ""0HL80J4NHRGP5"" completed keep alive response.
+2017-09-20 23:34:43.493 -03:00 [Information] Request finished in 1883.5743ms 302 
+2017-09-20 23:34:55.382 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/post?nome=teste%20teste&email=test1@gmaail.com application/json 0
+2017-09-20 23:34:55.385 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/Post"'.
+2017-09-20 23:34:55.387 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:34:55.407 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["teste teste", "test1@gmaail.com"]) - ModelState is Valid
+2017-09-20 23:34:55.477 -03:00 [Debug] Compiling query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:34:55.492 -03:00 [Debug] Optimized query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:34:56.034 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ToSequence(
+    element: MobLeeLead FirstOrDefault(
+        source: IEnumerable<MobLeeLead> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+                FROM [MobLeeLead] AS [l]
+                WHERE [l].[Email] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<MobLeeLead>
+        )
+    )
+)
+
+2017-09-20 23:34:56.038 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:34:56.122 -03:00 [Information] Executed DbCommand (67ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 23:34:56.125 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:34:56.131 -03:00 [Information] Salvando lead - Nome: teste teste, Email: test1@gmaail.com, IpV4: ::1, Data: 20/09/2017 23:34:55
+2017-09-20 23:34:56.174 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:34:56.186 -03:00 [Debug] Beginning transaction with isolation level 'Unspecified'.
+2017-09-20 23:34:56.275 -03:00 [Information] Executed DbCommand (24ms) [Parameters=[@p0='?' (Size = 150), @p1='?', @p2='?' (Size = 15), @p3='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MobLeeLead] ([Email], [Data], [IpV4], [Nome])
+VALUES (@p0, @p1, @p2, @p3);
+2017-09-20 23:34:56.280 -03:00 [Debug] Committing transaction.
+2017-09-20 23:34:56.285 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:34:56.290 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 23:34:56.295 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page-success/".
+2017-09-20 23:34:56.298 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 907.3303ms
+2017-09-20 23:34:56.300 -03:00 [Debug] Connection id ""0HL80J4NHRGP4"" completed keep alive response.
+2017-09-20 23:34:56.305 -03:00 [Information] Request finished in 924.3865ms 302 
+2017-09-20 23:35:10.560 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/post?nome=teste%20teste&email=test1@gmaail.com application/json 0
+2017-09-20 23:35:10.563 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/Post"'.
+2017-09-20 23:35:10.566 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:35:10.585 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["teste teste", "test1@gmaail.com"]) - ModelState is Valid
+2017-09-20 23:35:10.593 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:35:10.637 -03:00 [Information] Executed DbCommand (37ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 23:35:10.639 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:35:10.643 -03:00 [Warning] Lead já cadastrado - Nome: teste teste, Email: test1@gmaail.com, IpV4: ::1, Data: 20/09/2017 23:35:10
+2017-09-20 23:35:14.556 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 23:35:14.577 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page/?error=Email%20j%C3%A1%20cadastrado.".
+2017-09-20 23:35:14.578 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 4009.514ms
+2017-09-20 23:35:14.585 -03:00 [Debug] Connection id ""0HL80J4NHRGP5"" completed keep alive response.
+2017-09-20 23:35:14.588 -03:00 [Information] Request finished in 4028.57ms 302 
+2017-09-20 23:35:35.573 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/postfrombody application/json 42
+2017-09-20 23:35:35.576 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/PostFromBody"'.
+2017-09-20 23:35:35.580 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)"
+2017-09-20 23:35:35.604 -03:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/json"'.
+2017-09-20 23:35:35.698 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" with arguments (["OrganizaEventosApi.Models.MobLeeLead"]) - ModelState is Invalid
+2017-09-20 23:35:37.331 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.JsonResult".
+2017-09-20 23:35:37.347 -03:00 [Information] Executing JsonResult, writing value "{ Sucesso = False, Mensagem = E-mail inválido. }".
+2017-09-20 23:35:37.378 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" in 1802.6312ms
+2017-09-20 23:35:37.378 -03:00 [Debug] Connection id ""0HL80J4NHRGP4"" completed keep alive response.
+2017-09-20 23:35:37.395 -03:00 [Information] Request finished in 1821.6773ms 200 application/json; charset=utf-8
+2017-09-20 23:35:47.263 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/postfrombody application/json 48
+2017-09-20 23:35:47.263 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/PostFromBody"'.
+2017-09-20 23:35:47.263 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)"
+2017-09-20 23:35:47.263 -03:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/json"'.
+2017-09-20 23:35:47.293 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" with arguments (["OrganizaEventosApi.Models.MobLeeLead"]) - ModelState is Invalid
+2017-09-20 23:35:49.664 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.JsonResult".
+2017-09-20 23:35:49.664 -03:00 [Information] Executing JsonResult, writing value "{ Sucesso = False, Mensagem = E-mail inválido. }".
+2017-09-20 23:35:49.680 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" in 2406.7317ms
+2017-09-20 23:35:49.680 -03:00 [Debug] Connection id ""0HL80J4NHRGP5"" completed keep alive response.
+2017-09-20 23:35:49.680 -03:00 [Information] Request finished in 2425.995ms 200 application/json; charset=utf-8
+2017-09-20 23:36:05.693 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/postfrombody application/json 49
+2017-09-20 23:36:05.697 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/PostFromBody"'.
+2017-09-20 23:36:05.700 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)"
+2017-09-20 23:36:05.703 -03:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/json"'.
+2017-09-20 23:36:05.727 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" with arguments (["OrganizaEventosApi.Models.MobLeeLead"]) - ModelState is Invalid
+2017-09-20 23:36:05.730 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:36:05.748 -03:00 [Information] Executed DbCommand (16ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 23:36:05.748 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:36:05.748 -03:00 [Information] Salvando lead - Nome: teste teste, Email: teste2@gmail.com, IpV4: ::1, Data: 20/09/2017 23:36:05
+2017-09-20 23:36:05.748 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:36:05.748 -03:00 [Debug] Beginning transaction with isolation level 'Unspecified'.
+2017-09-20 23:36:05.784 -03:00 [Information] Executed DbCommand (16ms) [Parameters=[@p0='?' (Size = 150), @p1='?', @p2='?' (Size = 15), @p3='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MobLeeLead] ([Email], [Data], [IpV4], [Nome])
+VALUES (@p0, @p1, @p2, @p3);
+2017-09-20 23:36:05.786 -03:00 [Debug] Committing transaction.
+2017-09-20 23:36:05.790 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:36:07.996 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.JsonResult".
+2017-09-20 23:36:08.012 -03:00 [Information] Executing JsonResult, writing value "{ Sucesso = True, Mensagem = Operação realizada. }".
+2017-09-20 23:36:08.012 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" in 2311.3155ms
+2017-09-20 23:36:08.012 -03:00 [Debug] Connection id ""0HL80J4NHRGP4"" completed keep alive response.
+2017-09-20 23:36:08.012 -03:00 [Information] Request finished in 2331.2098ms 200 application/json; charset=utf-8
+2017-09-20 23:36:11.573 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/postfrombody application/json 49
+2017-09-20 23:36:11.575 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/PostFromBody"'.
+2017-09-20 23:36:11.577 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)"
+2017-09-20 23:36:11.579 -03:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/json"'.
+2017-09-20 23:36:11.597 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" with arguments (["OrganizaEventosApi.Models.MobLeeLead"]) - ModelState is Invalid
+2017-09-20 23:36:11.597 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:36:11.629 -03:00 [Information] Executed DbCommand (20ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 23:36:11.631 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:36:11.636 -03:00 [Warning] Lead já cadastrado - Nome: teste teste, Email: teste2@gmail.com, IpV4: ::1, Data: 20/09/2017 23:36:11
+2017-09-20 23:36:12.460 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.JsonResult".
+2017-09-20 23:36:12.465 -03:00 [Information] Executing JsonResult, writing value "{ Sucesso = True, Mensagem = Operação realizada. }".
+2017-09-20 23:36:12.469 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" in 887.6306ms
+2017-09-20 23:36:12.472 -03:00 [Debug] Connection id ""0HL80J4NHRGP5"" completed keep alive response.
+2017-09-20 23:36:12.477 -03:00 [Information] Request finished in 903.839ms 200 application/json; charset=utf-8
+2017-09-20 23:36:53.838 -03:00 [Debug] Hosting starting
+2017-09-20 23:36:54.105 -03:00 [Debug] Hosting started
+2017-09-20 23:36:54.229 -03:00 [Debug] Connection id ""0HL80J6FHF3N9"" started.
+2017-09-20 23:36:54.230 -03:00 [Debug] Connection id ""0HL80J6FHF3N8"" started.
+2017-09-20 23:36:54.230 -03:00 [Debug] Connection id ""0HL80J6FHF3NA"" started.
+2017-09-20 23:36:54.452 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:36:54.452 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads/get/organizaeventofloripa@gmail.com  
+2017-09-20 23:36:54.452 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:36:54.729 -03:00 [Debug] Connection id ""0HL80J6FHF3N8"" completed keep alive response.
+2017-09-20 23:36:54.745 -03:00 [Information] Request finished in 370.4602ms 200 
+2017-09-20 23:36:54.880 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:36:54.880 -03:00 [Debug] Connection id ""0HL80J6FHF3N9"" completed keep alive response.
+2017-09-20 23:36:54.896 -03:00 [Information] Request finished in 527.9923ms 404 
+2017-09-20 23:36:54.899 -03:00 [Debug] Request successfully matched the route with name '"getleads"' and template '"api/Leads/Get/{email}"'.
+2017-09-20 23:36:55.005 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)"
+2017-09-20 23:36:55.373 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" with arguments (["organizaeventofloripa@gmail.com"]) - ModelState is Valid
+2017-09-20 23:36:55.971 -03:00 [Debug] Compiling query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:36:55.985 -03:00 [Debug] Optimized query model: 
+'from MobLeeLead <generated>_0 in DbSet<MobLeeLead>
+select <generated>_0'
+2017-09-20 23:36:56.122 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+        FROM [MobLeeLead] AS [m]
+    , 
+    shaper: UnbufferedEntityShaper<MobLeeLead>
+)
+
+2017-09-20 23:36:56.213 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:36:56.449 -03:00 [Information] Executed DbCommand (63ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Email], [m].[Data], [m].[IpV4], [m].[Nome]
+FROM [MobLeeLead] AS [m]
+2017-09-20 23:36:56.527 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:36:56.545 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult".
+2017-09-20 23:36:56.582 -03:00 [Debug] No information found on request to perform content negotiation.
+2017-09-20 23:36:56.590 -03:00 [Debug] Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter"' and content type '"application/json"' to write the response.
+2017-09-20 23:36:56.595 -03:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2017-09-20 23:36:56.849 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Get (OrganizaEventosApi)" in 1835.0587ms
+2017-09-20 23:36:56.856 -03:00 [Debug] Connection id ""0HL80J6FHF3NA"" completed keep alive response.
+2017-09-20 23:36:56.860 -03:00 [Information] Request finished in 2495.8682ms 200 application/json; charset=utf-8
+2017-09-20 23:38:54.129 -03:00 [Debug] Hosting starting
+2017-09-20 23:38:54.430 -03:00 [Debug] Hosting started
+2017-09-20 23:38:54.677 -03:00 [Debug] Connection id ""0HL80J7JE2FOM"" started.
+2017-09-20 23:38:54.677 -03:00 [Debug] Connection id ""0HL80J7JE2FOL"" started.
+2017-09-20 23:38:54.878 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:38:54.878 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:38:55.100 -03:00 [Debug] Connection id ""0HL80J7JE2FOL"" completed keep alive response.
+2017-09-20 23:38:55.131 -03:00 [Information] Request finished in 323.4053ms 200 
+2017-09-20 23:38:55.278 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:38:55.278 -03:00 [Debug] Connection id ""0HL80J7JE2FOM"" completed keep alive response.
+2017-09-20 23:38:55.298 -03:00 [Information] Request finished in 504.4064ms 404 
+2017-09-20 23:39:14.037 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads application/x-www-form-urlencoded; charset=UTF-8 48
+2017-09-20 23:39:14.040 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:39:14.055 -03:00 [Debug] Connection id ""0HL80J7JE2FOL"" completed keep alive response.
+2017-09-20 23:39:14.059 -03:00 [Information] Request finished in 24.2276ms 404 
+2017-09-20 23:39:44.825 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/postfrombody application/x-www-form-urlencoded; charset=UTF-8 48
+2017-09-20 23:39:44.839 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/PostFromBody"'.
+2017-09-20 23:39:44.954 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)"
+2017-09-20 23:39:45.286 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:39:45.297 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:39:45.301 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 23:39:45.304 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"OrganizaEventosApi.Models.MobLeeLead"'.
+2017-09-20 23:39:45.335 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 23:39:45.351 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 23:39:45.371 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" in 405.8897ms
+2017-09-20 23:39:45.381 -03:00 [Debug] Connection id ""0HL80J7JE2FOM"" completed keep alive response.
+2017-09-20 23:39:45.386 -03:00 [Information] Request finished in 569.8781ms 415 
+2017-09-20 23:40:44.623 -03:00 [Debug] Connection id ""0HL80J7JE2FOL"" received FIN.
+2017-09-20 23:40:44.696 -03:00 [Debug] Connection id ""0HL80J7JE2FOL"" disconnecting.
+2017-09-20 23:40:44.696 -03:00 [Debug] Connection id ""0HL80J7JE2FOL"" sending FIN.
+2017-09-20 23:40:44.712 -03:00 [Debug] Connection id ""0HL80J7JE2FOL"" sent FIN with status "0".
+2017-09-20 23:40:44.728 -03:00 [Debug] Connection id ""0HL80J7JE2FOL"" stopped.
+2017-09-20 23:40:48.537 -03:00 [Debug] Connection id ""0HL80J7JE2FOM"" received FIN.
+2017-09-20 23:40:48.561 -03:00 [Debug] Connection id ""0HL80J7JE2FON"" started.
+2017-09-20 23:40:48.562 -03:00 [Debug] Connection id ""0HL80J7JE2FOM"" disconnecting.
+2017-09-20 23:40:48.565 -03:00 [Debug] Connection id ""0HL80J7JE2FOM"" sending FIN.
+2017-09-20 23:40:48.614 -03:00 [Debug] Connection id ""0HL80J7JE2FOM"" sent FIN with status "0".
+2017-09-20 23:40:48.617 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/postfrombody application/x-www-form-urlencoded; charset=UTF-8 48
+2017-09-20 23:40:48.662 -03:00 [Debug] Connection id ""0HL80J7JE2FOM"" stopped.
+2017-09-20 23:40:48.667 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/PostFromBody"'.
+2017-09-20 23:40:48.675 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)"
+2017-09-20 23:40:48.683 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:40:48.688 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:40:48.691 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 23:40:48.694 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"OrganizaEventosApi.Models.MobLeeLead"'.
+2017-09-20 23:40:48.697 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 23:40:48.703 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 23:40:48.710 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" in 28.1972ms
+2017-09-20 23:40:48.714 -03:00 [Debug] Connection id ""0HL80J7JE2FON"" completed keep alive response.
+2017-09-20 23:40:48.720 -03:00 [Information] Request finished in 147.9515ms 415 
+2017-09-20 23:41:30.985 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/postfrombody application/json 49
+2017-09-20 23:41:30.988 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/PostFromBody"'.
+2017-09-20 23:41:30.990 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)"
+2017-09-20 23:41:30.994 -03:00 [Debug] Selected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/json"'.
+2017-09-20 23:41:31.324 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" with arguments (["OrganizaEventosApi.Models.MobLeeLead"]) - ModelState is Invalid
+2017-09-20 23:41:34.636 -03:00 [Debug] Compiling query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:41:34.665 -03:00 [Debug] Optimized query model: 
+'(from MobLeeLead l in DbSet<MobLeeLead>
+where l.Email == __id_0
+select l)
+.FirstOrDefault()'
+2017-09-20 23:41:35.486 -03:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IEnumerable<MobLeeLead> _ToSequence(
+    element: MobLeeLead FirstOrDefault(
+        source: IEnumerable<MobLeeLead> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+                FROM [MobLeeLead] AS [l]
+                WHERE [l].[Email] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<MobLeeLead>
+        )
+    )
+)
+
+2017-09-20 23:41:35.557 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:41:35.889 -03:00 [Information] Executed DbCommand (127ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 23:41:35.973 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:41:36.016 -03:00 [Warning] Lead já cadastrado - Nome: teste teste, Email: teste2@gmail.com, IpV4: ::1, Data: 20/09/2017 23:41:33
+2017-09-20 23:41:36.019 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.JsonResult".
+2017-09-20 23:41:36.039 -03:00 [Information] Executing JsonResult, writing value "{ Sucesso = True, Mensagem = Operação realizada. }".
+2017-09-20 23:41:36.097 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" in 5113.8358ms
+2017-09-20 23:41:36.113 -03:00 [Debug] Connection id ""0HL80J7JE2FON"" completed keep alive response.
+2017-09-20 23:41:36.113 -03:00 [Information] Request finished in 5141.5913ms 200 application/json; charset=utf-8
+2017-09-20 23:41:39.930 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/post?nome=teste%20teste&email=test1@gmaail.com application/json 0
+2017-09-20 23:41:39.930 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/Post"'.
+2017-09-20 23:41:39.930 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)"
+2017-09-20 23:41:39.978 -03:00 [Information] Executing action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" with arguments (["teste teste", "test1@gmaail.com"]) - ModelState is Valid
+2017-09-20 23:41:44.613 -03:00 [Debug] Opening connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:41:44.663 -03:00 [Information] Executed DbCommand (27ms) [Parameters=[@__id_0='?' (Size = 150)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [l].[Email], [l].[Data], [l].[IpV4], [l].[Nome]
+FROM [MobLeeLead] AS [l]
+WHERE [l].[Email] = @__id_0
+2017-09-20 23:41:44.664 -03:00 [Debug] Closing connection to database 'ReadyToStartLandingPage' on server 'np:\\.\pipe\LOCALDB#3E14EB4A\tsql\query'.
+2017-09-20 23:41:44.664 -03:00 [Warning] Lead já cadastrado - Nome: teste teste, Email: test1@gmaail.com, IpV4: ::1, Data: 20/09/2017 23:41:44
+2017-09-20 23:41:44.680 -03:00 [Debug] Executed action method "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)", returned result "Microsoft.AspNetCore.Mvc.RedirectResult".
+2017-09-20 23:41:44.680 -03:00 [Information] Executing RedirectResult, redirecting to "https://www.organizaevento.blog.br/landing-page/?error=Email%20j%C3%A1%20cadastrado.".
+2017-09-20 23:41:44.697 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.Post (OrganizaEventosApi)" in 4755.0955ms
+2017-09-20 23:41:44.697 -03:00 [Debug] Connection id ""0HL80J7JE2FON"" completed keep alive response.
+2017-09-20 23:41:44.697 -03:00 [Information] Request finished in 4774.9335ms 302 
+2017-09-20 23:43:46.093 -03:00 [Debug] Connection id ""0HL80J7JE2FON"" disconnecting.
+2017-09-20 23:43:46.093 -03:00 [Debug] Connection id ""0HL80J7JE2FON"" sending FIN.
+2017-09-20 23:43:46.109 -03:00 [Debug] Connection id ""0HL80J7JE2FON"" sent FIN with status "0".
+2017-09-20 23:43:46.109 -03:00 [Debug] Connection id ""0HL80J7JE2FON"" stopped.
+2017-09-20 23:48:40.808 -03:00 [Debug] Hosting starting
+2017-09-20 23:48:41.084 -03:00 [Debug] Hosting started
+2017-09-20 23:48:41.194 -03:00 [Debug] Connection id ""0HL80JD27KH3O"" started.
+2017-09-20 23:48:41.194 -03:00 [Debug] Connection id ""0HL80JD27KH3P"" started.
+2017-09-20 23:48:41.402 -03:00 [Information] Request starting HTTP/1.1 GET http://localhost:24125/api/leads  
+2017-09-20 23:48:41.402 -03:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:24125/  0
+2017-09-20 23:48:41.633 -03:00 [Debug] Connection id ""0HL80JD27KH3P"" completed keep alive response.
+2017-09-20 23:48:41.657 -03:00 [Information] Request finished in 319.4591ms 200 
+2017-09-20 23:48:41.829 -03:00 [Debug] Request did not match any routes.
+2017-09-20 23:48:41.837 -03:00 [Debug] Connection id ""0HL80JD27KH3O"" completed keep alive response.
+2017-09-20 23:48:41.842 -03:00 [Information] Request finished in 521.7114ms 404 
+2017-09-20 23:48:55.510 -03:00 [Information] Request starting HTTP/1.1 POST http://localhost:24125/api/leads/postfrombody application/x-www-form-urlencoded; charset=UTF-8 48
+2017-09-20 23:48:55.525 -03:00 [Debug] Request successfully matched the route with name 'null' and template '"api/Leads/PostFromBody"'.
+2017-09-20 23:48:55.669 -03:00 [Debug] Executing action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)"
+2017-09-20 23:48:55.984 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:48:55.995 -03:00 [Debug] Rejected input formatter '"Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter"' for content type '"application/x-www-form-urlencoded; charset=UTF-8"'.
+2017-09-20 23:48:55.998 -03:00 [Debug] No input formatter was found to support the content type '"application/x-www-form-urlencoded; charset=UTF-8"' for use with the [FromBody] attribute.
+2017-09-20 23:48:56.000 -03:00 [Debug] To use model binding, remove the [FromBody] attribute from the property or parameter named '""' with model type '"OrganizaEventosApi.Models.MobLeeLead"'.
+2017-09-20 23:48:56.033 -03:00 [Debug] Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter"'.
+2017-09-20 23:48:56.048 -03:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 415
+2017-09-20 23:48:56.064 -03:00 [Information] Executed action "OrganizaEventosApi.Controllers.LeadsController.PostFromBody (OrganizaEventosApi)" in 386.6218ms
+2017-09-20 23:48:56.072 -03:00 [Debug] Connection id ""0HL80JD27KH3P"" completed keep alive response.
+2017-09-20 23:48:56.075 -03:00 [Information] Request finished in 569.2524ms 415 

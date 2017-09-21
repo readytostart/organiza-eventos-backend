@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace OrganizaEventosApi.Controllers{
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class LeadsController : Controller {
         private readonly IDataAccess<MobLeeLead, string> _repositorio;
 
@@ -23,13 +23,9 @@ namespace OrganizaEventosApi.Controllers{
             return email != "organizaeventofloripa@gmail.com" ? new List<MobLeeLead>() : _repositorio.GetItens();
         }
 
-        [HttpPost]
-        public IActionResult Post(string nome, string email, bool ehDownload = false) {
+        [HttpPost]        
+        public IActionResult Post(string nome, string email) {
             try {
-                if (ehDownload) {
-                    return SaveToDownload(nome, email);
-                }
-
                 if (!ValideNome(nome)) {
                     return RetorneResultadoDaOperacao(3);
                 }
@@ -47,7 +43,10 @@ namespace OrganizaEventosApi.Controllers{
 
         }
 
-        private IActionResult SaveToDownload(string nome, string email) {
+        [HttpPost]
+        public IActionResult PostFromBody([FromBody] MobLeeLead lead) {
+            var email = lead.Email;
+            var nome = lead.Nome;
             try {
                 if (!ValideEmail(email)) {
                     return new JsonResult(new {Sucesso = false, Mensagem = "E-mail inválido."});

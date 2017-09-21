@@ -34,6 +34,8 @@ namespace OrganizaEventosApi {
             services.AddDbContext<ApplicationContext>(opts => opts.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
             services.AddSingleton(typeof(IDataAccess<MobLeeLead, string>), typeof(LeadRepository));
             services.AddMvc();
+
+            services.AddCors();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) {
@@ -42,6 +44,12 @@ namespace OrganizaEventosApi {
             loggerFactory.AddSerilog();
 
             app.UseMvc();
+
+            app.UseCors(builder =>
+                builder
+                .AllowAnyHeader()
+                .AllowAnyOrigin()
+                .AllowAnyMethod());
         }
     }
 }

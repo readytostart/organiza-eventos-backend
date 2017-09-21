@@ -27,9 +27,14 @@
             cadastrar(nome, email);
         });
         function cadastrar(nome, email){
-            var params = {nome: nome, email: email}
-            var url = "http://localhost:24125/api/leads";
-            $.post(url, params);
+            var params = {Nome: nome, Email: email}
+            var url = "http://localhost:24125/api/leads/postfrombody";
+            $.post(url, params).done(function(){
+                alert('sucesso');
+            })
+            .fail(function(){
+                alert('erro');
+            });
         }        
 
     });
